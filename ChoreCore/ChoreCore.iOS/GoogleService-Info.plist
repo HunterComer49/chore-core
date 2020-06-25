@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>970985890391-9ntkmu2e6bkmqjjgshkaf1m91t0bpsp3.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.970985890391-9ntkmu2e6bkmqjjgshkaf1m91t0bpsp3</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBkCgQKC8WBL5rwQhLT2DMmaF3XFQnI9f0</string>
+	<key>GCM_SENDER_ID</key>
+	<string>970985890391</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.companyname.chorecore</string>
+	<key>PROJECT_ID</key>
+	<string>chore-core</string>
+	<key>STORAGE_BUCKET</key>
+	<string>chore-core.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:970985890391:ios:58688e0164c34c6dd1f912</string>
+	<key>DATABASE_URL</key>
+	<string>https://chore-core.firebaseio.com</string>
+</dict>
+</plist>

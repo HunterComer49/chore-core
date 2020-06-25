@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
+﻿
+using ChoreCore.Controllers;
 using Foundation;
 using UIKit;
+using Xamarin.Forms;
 
 namespace ChoreCore.iOS
 {
@@ -11,7 +10,7 @@ namespace ChoreCore.iOS
     // User Interface of the application, as well as listening (and optionally responding) to 
     // application events from iOS.
     [Register("AppDelegate")]
-    public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
+    public partial class AppDelegate : Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
     {
         //
         // This method is invoked when the application has loaded and is ready to run. In this 
@@ -22,9 +21,12 @@ namespace ChoreCore.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
-            global::Xamarin.Forms.Forms.Init();
+            DependencyService.Register<IAuth, AuthiOS>();
+
+            Forms.Init();
             LoadApplication(new App());
 
+            Firebase.Core.App.Configure();
             return base.FinishedLaunching(app, options);
         }
     }

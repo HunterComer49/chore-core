@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "W6oE5gtJgTrbOk0ujRrqm+mnThB7CHRjxwfl340bgJo+xtU/co9Pld7+czlgCzXgZcUXZvtdRg5Ts8iwD51hSQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\huntc\\OneDrive\\Documents\\Projects\\chore-core\\ChoreCore.ViewModels\\ChoreCore.ViewModels.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\huntc\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\huntc\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

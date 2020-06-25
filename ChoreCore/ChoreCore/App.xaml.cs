@@ -1,16 +1,15 @@
-﻿using System;
+﻿using ChoreCore.Controllers;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace ChoreCore
 {
     public partial class App : Application
     {
-        public App()
+        public App(IAuth auth)
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new LoginPage(auth);
         }
 
         protected override void OnStart()

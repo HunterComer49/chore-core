@@ -1,0 +1,8 @@
+C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore.Models\bin\Debug\netstandard2.0\ChoreCore.Models.deps.json
+C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore.Models\bin\Debug\netstandard2.0\ChoreCore.Models.dll
+C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore.Models\bin\Debug\netstandard2.0\ChoreCore.Models.pdb
+C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore.Models\obj\Debug\netstandard2.0\ChoreCore.Models.AssemblyInfoInputs.cache
+C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore.Models\obj\Debug\netstandard2.0\ChoreCore.Models.AssemblyInfo.cs
+C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore.Models\obj\Debug\netstandard2.0\ChoreCore.Models.csproj.CoreCompileInputs.cache
+C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore.Models\obj\Debug\netstandard2.0\ChoreCore.Models.dll
+C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore.Models\obj\Debug\netstandard2.0\ChoreCore.Models.pdb

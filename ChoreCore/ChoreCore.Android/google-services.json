@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "970985890391",
+    "firebase_url": "https://chore-core.firebaseio.com",
+    "project_id": "chore-core",
+    "storage_bucket": "chore-core.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:970985890391:android:1073071a68bc14ddd1f912",
+        "android_client_info": {
+          "package_name": "com.companyname.chorecore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "970985890391-9ju65i2ivq23grthus3lgi0kjrg2ng8d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFv13FBy_XKPxtKbAQ3_wWErOustl-2X8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "970985890391-9ju65i2ivq23grthus3lgi0kjrg2ng8d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
