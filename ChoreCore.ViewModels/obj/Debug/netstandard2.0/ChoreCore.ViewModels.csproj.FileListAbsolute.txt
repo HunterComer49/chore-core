@@ -1,12 +1,12 @@
 C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore.ViewModels\bin\Debug\netstandard2.0\ChoreCore.ViewModels.deps.json
 C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore.ViewModels\bin\Debug\netstandard2.0\ChoreCore.ViewModels.dll
 C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore.ViewModels\bin\Debug\netstandard2.0\ChoreCore.ViewModels.pdb
-C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore.ViewModels\obj\Debug\netstandard2.0\ChoreCore.ViewModels.AssemblyInfoInputs.cache
-C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore.ViewModels\obj\Debug\netstandard2.0\ChoreCore.ViewModels.AssemblyInfo.cs
-C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore.ViewModels\obj\Debug\netstandard2.0\ChoreCore.ViewModels.csproj.CoreCompileInputs.cache
-C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore.ViewModels\obj\Debug\netstandard2.0\ChoreCore.ViewModels.dll
-C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore.ViewModels\obj\Debug\netstandard2.0\ChoreCore.ViewModels.pdb
 C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore.ViewModels\bin\Debug\netstandard2.0\ChoreCore.Controllers.dll
 C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore.ViewModels\bin\Debug\netstandard2.0\ChoreCore.Controllers.pdb
 C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore.ViewModels\obj\Debug\netstandard2.0\ChoreCore.ViewModels.csprojAssemblyReference.cache
+C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore.ViewModels\obj\Debug\netstandard2.0\ChoreCore.ViewModels.AssemblyInfoInputs.cache
+C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore.ViewModels\obj\Debug\netstandard2.0\ChoreCore.ViewModels.AssemblyInfo.cs
+C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore.ViewModels\obj\Debug\netstandard2.0\ChoreCore.ViewModels.csproj.CoreCompileInputs.cache
 C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore.ViewModels\obj\Debug\netstandard2.0\ChoreCore.ViewModels.csproj.CopyComplete
+C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore.ViewModels\obj\Debug\netstandard2.0\ChoreCore.ViewModels.dll
+C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore.ViewModels\obj\Debug\netstandard2.0\ChoreCore.ViewModels.pdb

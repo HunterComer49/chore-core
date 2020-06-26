@@ -6,20 +6,39 @@
              mc:Ignorable="d"
              x:Class="ChoreCore.LoginPage">
     <ContentPage.Content>
-        <StackLayout VerticalOptions="Center" 
-                     HorizontalOptions="FillAndExpand"
-                     Spacing="30"
-                     Margin="10">
-            <Entry Placeholder="Email" 
-                   Text="{Binding Email}"/>
-            <Entry Placeholder="Password"
-                   Text="{Binding Password}"/>
-            <Button Text="Login" 
-                    Command="{x:Binding LoginCommand}"/>
-            <Button Text="Forgot your password?"
-                    BackgroundColor="Transparent"/>
-            <Button Text="Not a member? Create an account!"
-                    BackgroundColor="Transparent"/>
+        <StackLayout VerticalOptions="CenterAndExpand" 
+                     HorizontalOptions="FillAndExpand">
+            <Frame Margin="80,0">
+                <Image Source="/Assets/Images/logo.png"
+                       Aspect="AspectFit"/>
+            </Frame>
+
+            <StackLayout Spacing="10"
+                         Margin="20,0"
+                         Padding="20,0">
+                <Entry Placeholder="Email" 
+                       Text="{Binding Email, Mode=TwoWay}"/>
+                <Entry Placeholder="Password"
+                       IsPassword="True"
+                       Text="{Binding Password, Mode=TwoWay}"/>
+                <Button Text="Log In" 
+                        Command="{Binding LoginCommand}"/>
+            </StackLayout>
+
+            <Label Text="Email and/or password are incorrect. Please try again." 
+                   TextColor="Red" 
+                   HorizontalOptions="Center"
+                   IsVisible="{Binding ErrorVis, Mode=OneWay}"/>
+            
+            <StackLayout Margin="20,0">
+                <Button Text="Forgot your password?"
+                        BackgroundColor="Transparent"
+                        FontSize="Small"
+                        Command="{Binding ForgotPasswordCommand}"/>
+                <Button Text="Not a member? Create an account!"
+                        FontSize="Medium"
+                        BackgroundColor="Transparent"/>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -6,10 +6,13 @@ namespace ChoreCore
 {
     public partial class LoginPage : ContentPage
     {
-        public LoginPage(IAuth auth)
-        {
+        private readonly LoginViewModel viewModel;
+
+        public LoginPage(IAuth auth, INavigationService navigation)
+        { 
             InitializeComponent();
-            BindingContext = new LoginViewModel(auth);
+            viewModel = new LoginViewModel(auth, navigation);
+            BindingContext = viewModel;
         }
     }
 }

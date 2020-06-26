@@ -1,5 +1,15 @@
 C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore\ChoreCore.iOS\bin\iPhone\Debug\ChoreCore.iOS.exe
 C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore\ChoreCore.iOS\bin\iPhone\Debug\ChoreCore.iOS.pdb
+C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore\ChoreCore.iOS\bin\iPhone\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore\ChoreCore.iOS\bin\iPhone\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore\ChoreCore.iOS\bin\iPhone\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore\ChoreCore.iOS\bin\iPhone\Debug\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore\ChoreCore.iOS\bin\iPhone\Debug\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore\ChoreCore.iOS\bin\iPhone\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore\ChoreCore.iOS\bin\iPhone\Debug\Microsoft.Extensions.Primitives.dll
+C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore\ChoreCore.iOS\bin\iPhone\Debug\System.Buffers.dll
+C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore\ChoreCore.iOS\bin\iPhone\Debug\System.Memory.dll
+C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore\ChoreCore.iOS\bin\iPhone\Debug\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore\ChoreCore.iOS\bin\iPhone\Debug\Xamarin.Essentials.dll
 C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore\ChoreCore.iOS\bin\iPhone\Debug\Xamarin.Essentials.pdb
 C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore\ChoreCore.iOS\bin\iPhone\Debug\Firebase.Auth.dll
@@ -46,9 +56,11 @@ C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore\ChoreCore.iOS\bi
 C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore\ChoreCore.iOS\bin\iPhone\Debug\ChoreCore.Controllers.dll
 C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore\ChoreCore.iOS\bin\iPhone\Debug\ChoreCore.dll
 C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore\ChoreCore.iOS\bin\iPhone\Debug\Xamarin.Forms.Platform.iOS.dll
+C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore\ChoreCore.iOS\bin\iPhone\Debug\ChoreCore.ViewModels.dll
 C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore\ChoreCore.iOS\bin\iPhone\Debug\ChoreCore.Controllers.pdb
 C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore\ChoreCore.iOS\bin\iPhone\Debug\ChoreCore.pdb
 C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore\ChoreCore.iOS\bin\iPhone\Debug\Xamarin.Forms.Platform.iOS.pdb
+C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore\ChoreCore.iOS\bin\iPhone\Debug\ChoreCore.ViewModels.pdb
 C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore\ChoreCore.iOS\obj\iPhone\Debug\ibtool\_BundleResourceWithLogicalName.items
 C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore\ChoreCore.iOS\obj\iPhone\Debug\actool\_PartialAppManifest.items
 C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore\ChoreCore.iOS\obj\iPhone\Debug\actool\_BundleResourceWithLogicalName.items

@@ -22,9 +22,10 @@ namespace ChoreCore.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             DependencyService.Register<IAuth, AuthiOS>();
+            DependencyService.Register<INavigationService, NavigationService>();
 
             Forms.Init();
-            LoadApplication(new App());
+            LoadApplication(new App(DependencyService.Get<IAuth>(), DependencyService.Get<INavigationService>()));
 
             Firebase.Core.App.Configure();
             return base.FinishedLaunching(app, options);

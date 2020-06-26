@@ -17,12 +17,13 @@ namespace ChoreCore.Droid
             ToolbarResource = Resource.Layout.Toolbar;
 
             DependencyService.Register<IAuth, AuthDroid>();
+            DependencyService.Register<INavigationService, NavigationService>();
 
             base.OnCreate(savedInstanceState);
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             Forms.Init(this, savedInstanceState);
-            LoadApplication(new App(DependencyService.Get<IAuth>()));
+            LoadApplication(new App(DependencyService.Get<IAuth>(), DependencyService.Get<INavigationService>()));
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Permission[] grantResults)
         {

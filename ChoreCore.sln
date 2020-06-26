@@ -15,9 +15,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChoreCore.Managers", "Chore
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChoreCore.DB", "ChoreCore.DB\ChoreCore.DB.csproj", "{A1EEC812-CE75-4C2C-A288-D950757A7E47}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChoreCore.Models", "ChoreCore.Models\ChoreCore.Models.csproj", "{22BFA2FC-7AF0-4E10-AF88-683FF5A3AC34}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChoreCore.Models", "ChoreCore.Models\ChoreCore.Models.csproj", "{22BFA2FC-7AF0-4E10-AF88-683FF5A3AC34}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChoreCore.ViewModels", "ChoreCore.ViewModels\ChoreCore.ViewModels.csproj", "{E2EC3792-1499-400F-A208-BFEB1332FB8E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChoreCore.ViewModels", "ChoreCore.ViewModels\ChoreCore.ViewModels.csproj", "{E2EC3792-1499-400F-A208-BFEB1332FB8E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChoreCore.Tests", "ChoreCore.Tests\ChoreCore.Tests.csproj", "{DF44CC57-6F79-48FA-9967-6EE558E2ECFA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -143,6 +145,18 @@ Global
 		{E2EC3792-1499-400F-A208-BFEB1332FB8E}.Release|iPhone.Build.0 = Release|Any CPU
 		{E2EC3792-1499-400F-A208-BFEB1332FB8E}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{E2EC3792-1499-400F-A208-BFEB1332FB8E}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{DF44CC57-6F79-48FA-9967-6EE558E2ECFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF44CC57-6F79-48FA-9967-6EE558E2ECFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF44CC57-6F79-48FA-9967-6EE558E2ECFA}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{DF44CC57-6F79-48FA-9967-6EE558E2ECFA}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{DF44CC57-6F79-48FA-9967-6EE558E2ECFA}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{DF44CC57-6F79-48FA-9967-6EE558E2ECFA}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{DF44CC57-6F79-48FA-9967-6EE558E2ECFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF44CC57-6F79-48FA-9967-6EE558E2ECFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF44CC57-6F79-48FA-9967-6EE558E2ECFA}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{DF44CC57-6F79-48FA-9967-6EE558E2ECFA}.Release|iPhone.Build.0 = Release|Any CPU
+		{DF44CC57-6F79-48FA-9967-6EE558E2ECFA}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{DF44CC57-6F79-48FA-9967-6EE558E2ECFA}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

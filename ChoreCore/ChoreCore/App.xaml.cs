@@ -5,11 +5,11 @@ namespace ChoreCore
 {
     public partial class App : Application
     {
-        public App(IAuth auth)
+        public App(IAuth auth, INavigationService navigation)
         {
             InitializeComponent();
 
-            MainPage = new LoginPage(auth);
+            MainPage = new LoginPage(auth, navigation);
         }
 
         protected override void OnStart()

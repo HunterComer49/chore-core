@@ -13,3 +13,7 @@
 /ChoreCore.Managers/bin/Debug/netstandard2.0
 /ChoreCore.Models/bin/Debug/netstandard2.0
 /ChoreCore.ViewModels/bin/Debug/netstandard2.0
+/ChoreCore.Tests/bin/Debug/netcoreapp3.1
+/ChoreCore.Tests/obj
+/ChoreCore.VMTests/bin/Debug
+/ChoreCore.VMTests/obj/Debug
