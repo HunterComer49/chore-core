@@ -13,6 +13,8 @@ namespace ChoreCore
             InitializeComponent();
             viewModel = new LoginViewModel(auth, navigation);
             BindingContext = viewModel;
+
+            logoImage.Source = ImageSource.FromFile("logo.png");
         }
     }
 }

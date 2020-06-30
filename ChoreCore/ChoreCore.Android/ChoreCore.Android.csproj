@@ -97,9 +97,7 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\drawable\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\..\ChoreCore.Controllers\ChoreCore.Controllers.csproj">
       <Project>{055E9A98-A4CA-4C73-A04E-A55DBFE96E09}</Project>
@@ -109,6 +107,9 @@
       <Project>{237AD1E3-BA98-4F49-B2CF-446692DD4023}</Project>
       <Name>ChoreCore</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

@@ -18,3 +18,4 @@ C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore\ChoreCore\obj\De
 C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore\ChoreCore\obj\Debug\netstandard2.0\ChoreCore.dll
 C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore\ChoreCore\obj\Debug\netstandard2.0\ref\ChoreCore.dll
 C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore\ChoreCore\obj\Debug\netstandard2.0\ChoreCore.pdb
+C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore\ChoreCore\obj\Debug\netstandard2.0\ForgotPasswordPage.xaml.g.cs

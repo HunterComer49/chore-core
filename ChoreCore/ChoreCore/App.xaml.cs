@@ -9,7 +9,7 @@ namespace ChoreCore
         {
             InitializeComponent();
 
-            MainPage = new LoginPage(auth, navigation);
+            MainPage = new NavigationPage(new LoginPage(auth, navigation));
         }
 
         protected override void OnStart()

@@ -6,9 +6,11 @@ namespace ChoreCore
 {
     public class NavigationService : INavigationService
     {
-        public Task NavigateToForgotPassword()
+        public async Task NavigateToForgotPassword()
         {
-            throw new System.NotImplementedException();
+            await Application.Current.MainPage.Navigation
+                 .PushAsync(new ForgotPasswordPage(DependencyService.Get<IAuth>(),
+                                DependencyService.Get<INavigationService>()));
         }
 
         public Task NavigateToHomePage()

@@ -37,7 +37,6 @@ namespace ChoreCore.ViewModels
                 }
             }
         }
-
         public string Password
         {
             get { return _password; }
@@ -50,7 +49,6 @@ namespace ChoreCore.ViewModels
                 }
             }
         }
-
         public bool ErrorVis
         {
             get { return _errorVis; }
@@ -89,8 +87,8 @@ namespace ChoreCore.ViewModels
 
         public async void OnForgotPassword()
         {
-            Email = "";
-            Password = "";
+            Email = string.Empty;
+            Password = string.Empty;
 
             await _navigation.NavigateToForgotPassword();
         }

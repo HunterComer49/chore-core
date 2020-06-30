@@ -142,4 +142,7 @@
       <Name>ChoreCore</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\logo.png" />
+  </ItemGroup>
 </Project>

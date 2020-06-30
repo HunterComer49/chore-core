@@ -18,7 +18,6 @@ C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore\ChoreCore.Androi
 C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore\ChoreCore.Android\obj\Debug\90\_VerifyXamarinAndroidSupportVersions.stamp
 C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore\ChoreCore.Android\obj\Debug\90\stamp\_BuildLibraryImportsCache.stamp
 C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore\ChoreCore.Android\obj\Debug\90\res.flag
-C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore\ChoreCore.Android\obj\Debug\90\stamp\3C3DE7F6DC8E8CD2.stamp
 C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore\ChoreCore.Android\obj\Debug\90\flata\3C3DE7F6DC8E8CD2.stamp
 C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore\ChoreCore.Android\obj\Debug\90\flata\9E6F64BC93415657.stamp
 C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore\ChoreCore.Android\obj\Debug\90\flata\DA2B0B7586414B6F.stamp
@@ -566,3 +565,4 @@ C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore\ChoreCore.Androi
 C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore\ChoreCore.Android\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore\ChoreCore.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore\ChoreCore.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore\ChoreCore.Android\obj\Debug\90\res\drawable\logo.png

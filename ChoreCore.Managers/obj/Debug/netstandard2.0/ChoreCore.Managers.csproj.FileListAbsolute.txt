@@ -6,3 +6,4 @@ C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore.Managers\obj\Deb
 C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore.Managers\obj\Debug\netstandard2.0\ChoreCore.Managers.csproj.CoreCompileInputs.cache
 C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore.Managers\obj\Debug\netstandard2.0\ChoreCore.Managers.dll
 C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore.Managers\obj\Debug\netstandard2.0\ChoreCore.Managers.pdb
+C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore.Managers\obj\Debug\netstandard2.0\ChoreCore.Managers.csprojAssemblyReference.cache
