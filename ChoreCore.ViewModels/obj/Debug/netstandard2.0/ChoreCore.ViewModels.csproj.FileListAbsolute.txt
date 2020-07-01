@@ -2,7 +2,15 @@ C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore.ViewModels\bin\D
 C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore.ViewModels\bin\Debug\netstandard2.0\ChoreCore.ViewModels.dll
 C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore.ViewModels\bin\Debug\netstandard2.0\ChoreCore.ViewModels.pdb
 C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore.ViewModels\bin\Debug\netstandard2.0\ChoreCore.Controllers.dll
+C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore.ViewModels\bin\Debug\netstandard2.0\ChoreCore.Managers.dll
+C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore.ViewModels\bin\Debug\netstandard2.0\ChoreCore.Models.dll
+C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore.ViewModels\bin\Debug\netstandard2.0\Xamarin.Forms.Core.dll
+C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore.ViewModels\bin\Debug\netstandard2.0\Xamarin.Forms.Platform.dll
 C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore.ViewModels\bin\Debug\netstandard2.0\ChoreCore.Controllers.pdb
+C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore.ViewModels\bin\Debug\netstandard2.0\ChoreCore.Models.pdb
+C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore.ViewModels\bin\Debug\netstandard2.0\ChoreCore.Managers.pdb
+C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore.ViewModels\bin\Debug\netstandard2.0\Xamarin.Forms.Core.pdb
+C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore.ViewModels\bin\Debug\netstandard2.0\Xamarin.Forms.Core.xml
 C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore.ViewModels\obj\Debug\netstandard2.0\ChoreCore.ViewModels.csprojAssemblyReference.cache
 C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore.ViewModels\obj\Debug\netstandard2.0\ChoreCore.ViewModels.AssemblyInfoInputs.cache
 C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore.ViewModels\obj\Debug\netstandard2.0\ChoreCore.ViewModels.AssemblyInfo.cs

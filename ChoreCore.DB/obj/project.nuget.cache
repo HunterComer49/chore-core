@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "AG70WmLMy6LXlDQ6f8cD8CvujQIwGXoWNvgKP+Deb55/qKC+ovCV8jhHE9Yt+xbwWL8NPHKwoHm7M/cohjhYHw==",
+  "dgSpecHash": "wovDBL2Mv0WMiim22KVHc7DgY6gZSlfO38JCZ5IDLGagPr96aKUW5UNfrf+nALrYb7aJGikFeKP2u7Ui5sdtNg==",
   "success": true,
   "projectFilePath": "C:\\Users\\huntc\\OneDrive\\Documents\\Projects\\chore-core\\ChoreCore.DB\\ChoreCore.DB.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\huntc\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\huntc\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Users\\huntc\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\huntc\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
   ],
   "logs": []
 }

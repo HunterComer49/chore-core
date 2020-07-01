@@ -71,9 +71,9 @@ namespace ChoreCore.Android
                 GetTokenResult token = await user.User.GetIdTokenAsync(false);
                 return token.Token;
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                return string.Empty;
+                throw new Exception(e.Message);
             }
         }
     }

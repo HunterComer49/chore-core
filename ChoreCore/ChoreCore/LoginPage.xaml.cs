@@ -8,10 +8,10 @@ namespace ChoreCore
     {
         private readonly LoginViewModel viewModel;
 
-        public LoginPage(IAuth auth, INavigationService navigation)
+        public LoginPage()
         { 
             InitializeComponent();
-            viewModel = new LoginViewModel(auth, navigation);
+            viewModel = new LoginViewModel();
             BindingContext = viewModel;
 
             logoImage.Source = ImageSource.FromFile("logo.png");

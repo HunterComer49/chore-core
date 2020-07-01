@@ -1,5 +1,6 @@
 ﻿using ChoreCore.Controllers;
 using System.Windows.Input;
+using Xamarin.Forms;
 
 namespace ChoreCore.ViewModels
 {
@@ -13,15 +14,16 @@ namespace ChoreCore.ViewModels
         private bool _errorVis;
         #endregion
 
-        public LoginViewModel(IAuth authentication, INavigationService navigation)
+        public LoginViewModel(IAuth authentication = null, INavigationService navigation = null)
         {
-            _auth = authentication;
-            _navigation = navigation;
+            _auth = authentication ?? DependencyService.Get<IAuth>();
+            _navigation = navigation ?? (INavigationService)Splat.Locator.Current.GetService(typeof(INavigationService));
 
             ErrorVis = false;
 
             LoginCommand = new RelayCommand(OnLogin);
             ForgotPasswordCommand = new RelayCommand(OnForgotPassword);
+            CreateAccountCommand = new RelayCommand(OnCreateAccount);
         }
 
         #region Public Properties
@@ -65,6 +67,7 @@ namespace ChoreCore.ViewModels
 
         public ICommand LoginCommand { get; private set; }
         public ICommand ForgotPasswordCommand { get; set; }
+        public ICommand CreateAccountCommand { get; set; }
 
         public async void OnLogin()
         {
@@ -79,7 +82,6 @@ namespace ChoreCore.ViewModels
                 else
                 {
                     ErrorVis = false;
-                    // navigate
                     await _navigation.NavigateToHomePage();
                 }
             }
@@ -91,6 +93,14 @@ namespace ChoreCore.ViewModels
             Password = string.Empty;
 
             await _navigation.NavigateToForgotPassword();
+        }
+
+        public async void OnCreateAccount()
+        {
+            Email = string.Empty;
+            Password = string.Empty;
+
+            await _navigation.NavigateToCreateUser();
         }
     }
 }

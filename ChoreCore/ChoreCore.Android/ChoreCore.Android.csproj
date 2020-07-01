@@ -103,6 +103,10 @@
       <Project>{055E9A98-A4CA-4C73-A04E-A55DBFE96E09}</Project>
       <Name>ChoreCore.Controllers</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\ChoreCore.Managers\ChoreCore.Managers.csproj">
+      <Project>{91536608-AA53-4F63-9428-79E0C8BB2984}</Project>
+      <Name>ChoreCore.Managers</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ChoreCore\ChoreCore.csproj">
       <Project>{237AD1E3-BA98-4F49-B2CF-446692DD4023}</Project>
       <Name>ChoreCore</Name>

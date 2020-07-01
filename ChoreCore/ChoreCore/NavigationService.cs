@@ -9,8 +9,7 @@ namespace ChoreCore
         public async Task NavigateToForgotPassword()
         {
             await Application.Current.MainPage.Navigation
-                 .PushAsync(new ForgotPasswordPage(DependencyService.Get<IAuth>(),
-                                DependencyService.Get<INavigationService>()));
+                 .PushAsync(new ForgotPasswordPage());
         }
 
         public Task NavigateToHomePage()
@@ -21,11 +20,16 @@ namespace ChoreCore
         public async Task NavigateToLogin()
         {
             await Application.Current.MainPage.Navigation
-                  .PushAsync(new LoginPage(DependencyService.Get<IAuth>(), 
-                                 DependencyService.Get<INavigationService>()));
+                  .PushAsync(new LoginPage());
         }
 
-        public Task NavigateToNewUser()
+        public async Task NavigateToCreateUser()
+        {
+            await Application.Current.MainPage.Navigation
+                  .PushAsync(new CreateUserPage());
+        }
+
+        public Task NavigateToNewUserInfo()
         {
             throw new System.NotImplementedException();
         }

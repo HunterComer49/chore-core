@@ -11,10 +11,10 @@ namespace ChoreCore
     {
         private readonly ForgotPasswordViewModel viewModel;
 
-        public ForgotPasswordPage(IAuth auth, INavigationService navigation)
+        public ForgotPasswordPage()
         {
             InitializeComponent();
-            viewModel = new ForgotPasswordViewModel(auth, navigation);
+            viewModel = new ForgotPasswordViewModel();
             BindingContext = viewModel;
 
             logoImage.Source = ImageSource.FromFile("logo.png");

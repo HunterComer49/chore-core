@@ -5,7 +5,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Splat" Version="9.4.5" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\ChoreCore.Controllers\ChoreCore.Controllers.csproj" />
+    <ProjectReference Include="..\ChoreCore.Models\ChoreCore.Models.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Xamarin.Forms.Core">
+      <HintPath>..\..\..\..\..\..\..\Microsoft\Xamarin\NuGet\xamarin.forms\4.5.0.495\lib\Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

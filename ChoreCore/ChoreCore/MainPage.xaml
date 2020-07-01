@@ -7,7 +7,7 @@
              x:Class="ChoreCore.MainPage">
 
     <StackLayout HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand">
+                 VerticalOptions="CenterAndExpand">
     </StackLayout>
 
 </ContentPage>

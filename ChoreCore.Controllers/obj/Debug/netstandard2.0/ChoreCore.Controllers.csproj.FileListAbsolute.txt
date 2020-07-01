@@ -1,9 +1,14 @@
 C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore.Controllers\bin\Debug\netstandard2.0\ChoreCore.Controllers.deps.json
 C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore.Controllers\bin\Debug\netstandard2.0\ChoreCore.Controllers.dll
 C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore.Controllers\bin\Debug\netstandard2.0\ChoreCore.Controllers.pdb
+C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore.Controllers\bin\Debug\netstandard2.0\ChoreCore.Managers.dll
+C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore.Controllers\bin\Debug\netstandard2.0\ChoreCore.Models.dll
+C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore.Controllers\bin\Debug\netstandard2.0\ChoreCore.Managers.pdb
+C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore.Controllers\bin\Debug\netstandard2.0\ChoreCore.Models.pdb
+C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore.Controllers\obj\Debug\netstandard2.0\ChoreCore.Controllers.csprojAssemblyReference.cache
 C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore.Controllers\obj\Debug\netstandard2.0\ChoreCore.Controllers.AssemblyInfoInputs.cache
 C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore.Controllers\obj\Debug\netstandard2.0\ChoreCore.Controllers.AssemblyInfo.cs
 C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore.Controllers\obj\Debug\netstandard2.0\ChoreCore.Controllers.csproj.CoreCompileInputs.cache
+C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore.Controllers\obj\Debug\netstandard2.0\ChoreCore.Controllers.csproj.CopyComplete
 C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore.Controllers\obj\Debug\netstandard2.0\ChoreCore.Controllers.dll
 C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore.Controllers\obj\Debug\netstandard2.0\ChoreCore.Controllers.pdb
-C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore.Controllers\obj\Debug\netstandard2.0\ChoreCore.Controllers.csprojAssemblyReference.cache

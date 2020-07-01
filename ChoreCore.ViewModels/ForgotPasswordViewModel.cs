@@ -1,5 +1,6 @@
 ﻿using ChoreCore.Controllers;
 using System.Windows.Input;
+using Xamarin.Forms;
 
 namespace ChoreCore.ViewModels
 {
@@ -12,10 +13,10 @@ namespace ChoreCore.ViewModels
         private bool _errorVis;
         #endregion
 
-        public ForgotPasswordViewModel(IAuth auth, INavigationService navigation)
+        public ForgotPasswordViewModel(IAuth auth = null, INavigationService navigation = null)
         {
-            _auth = auth;
-            _navigation = navigation;
+            _auth = auth ?? DependencyService.Get<IAuth>();
+            _navigation = navigation ?? (INavigationService)Splat.Locator.Current.GetService(typeof(INavigationService));
 
             ErrorVis = false;
 

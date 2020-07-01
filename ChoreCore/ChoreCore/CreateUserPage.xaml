@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ChoreCore.CreateUserPage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.7*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="6*" />
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="0"
+                   Text="Chore Core"
+                   FontSize="Title"
+                   TextColor="White"
+                   BackgroundColor="Black"
+                   HorizontalOptions="Fill"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center" />
+            <Label Grid.Row="1"
+                   Text="Create an Account"
+                   FontSize="Title"
+                   TextColor="Black"
+                   HorizontalOptions="Center"
+                   VerticalTextAlignment="Center" />
+
+            <StackLayout Grid.Row="2"
+                         Margin="40,30">
+                <Entry Placeholder="Email"
+                       Text="{Binding Email, Mode=TwoWay}" />
+                <Label Text="Invalid Email. Please try again."
+                       TextColor="Red"
+                       HorizontalOptions="Center"
+                       IsVisible="{Binding EmailErrorVis, Mode=OneWay}" />
+
+                <Entry Placeholder="Password"
+                       IsPassword="True"
+                       Text="{Binding Password, Mode=TwoWay}" />
+                <StackLayout IsVisible="{Binding PasswordIncorrectErrorVis, Mode=OneWay}"
+                             HorizontalOptions="Center">
+                    <Label Text="Invalid password."
+                           TextColor="Red"
+                           HorizontalTextAlignment="Center" />
+                    <Label Text="Minimum of 8 characters."
+                           TextColor="Red"
+                           HorizontalTextAlignment="Center" />
+                    <Label Text="At least 1 Uppercase, 1 Lowercase, 1 Number, 1 Special Character."
+                           Margin="10,0"
+                           TextColor="Red"
+                           HorizontalTextAlignment="Center" />
+                </StackLayout>
+
+                <Entry Placeholder="Confirm Password"
+                       IsPassword="True"
+                       Text="{Binding ConfirmPassword, Mode=TwoWay}" />
+
+                <Label Text="Passwords to not match. Please try again."
+                       TextColor="Red"
+                       HorizontalOptions="Center"
+                       IsVisible="{Binding PasswordErrorVis, Mode=OneWay}" />
+                <Label Text="{Binding EmailError, Mode=OneWay}"
+                       TextColor="Red"
+                       HorizontalOptions="Center"
+                       IsVisible="{Binding CreateUserErrorVis, Mode=OneWay}" />
+
+                <Button Text="Sign Up"
+                        Command="{Binding SignUpCommand}" />
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

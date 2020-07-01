@@ -16,15 +16,20 @@ namespace ChoreCore.Droid
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 
-            DependencyService.Register<IAuth, AuthDroid>();
-            DependencyService.Register<INavigationService, NavigationService>();
+            RegisterServices();
 
             base.OnCreate(savedInstanceState);
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             Forms.Init(this, savedInstanceState);
-            LoadApplication(new App(DependencyService.Get<IAuth>(), DependencyService.Get<INavigationService>()));
+            LoadApplication(new App());
         }
+
+        private static void RegisterServices()
+        {
+            DependencyService.Register<IAuth, AuthDroid>();
+        }
+
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Permission[] grantResults)
         {
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);

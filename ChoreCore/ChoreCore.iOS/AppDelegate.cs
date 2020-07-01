@@ -1,5 +1,4 @@
-﻿
-using ChoreCore.Controllers;
+﻿using ChoreCore.Controllers;
 using Foundation;
 using UIKit;
 using Xamarin.Forms;
@@ -21,14 +20,18 @@ namespace ChoreCore.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
-            DependencyService.Register<IAuth, AuthiOS>();
-            DependencyService.Register<INavigationService, NavigationService>();
+            RegisterServices();
 
             Forms.Init();
-            LoadApplication(new App(DependencyService.Get<IAuth>(), DependencyService.Get<INavigationService>()));
+            LoadApplication(new App());
 
             Firebase.Core.App.Configure();
             return base.FinishedLaunching(app, options);
+        }
+
+        private static void RegisterServices()
+        {
+            DependencyService.Register<IAuth, AuthiOS>();
         }
     }
 }

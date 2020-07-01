@@ -6,7 +6,8 @@ namespace ChoreCore.Controllers
     {
         Task NavigateToLogin();
         Task NavigateToForgotPassword();
-        Task NavigateToNewUser();
+        Task NavigateToCreateUser();
         Task NavigateToHomePage();
+        Task NavigateToNewUserInfo();
     }
 }

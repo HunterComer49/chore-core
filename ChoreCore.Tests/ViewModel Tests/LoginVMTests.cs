@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using System.Threading.Tasks;
 
-namespace ChoreCore.Tests
+namespace ChoreCore.Tests.ViewModel_Tests
 {
     [TestClass]
     public class LoginVMTests
@@ -72,6 +72,27 @@ namespace ChoreCore.Tests
             navigationMock.Verify(a => a.NavigateToForgotPassword(), Times.Once);
             Assert.IsTrue(string.IsNullOrEmpty(viewModel.Email));
             Assert.IsTrue(string.IsNullOrEmpty(viewModel.Password));
+        }
+
+        [TestMethod]
+        public void TestOnCreateAccount()
+        {
+            Mock<IAuth> authMock = new Mock<IAuth>(MockBehavior.Strict);
+
+            Mock<INavigationService> navigationMock = new Mock<INavigationService>(MockBehavior.Strict);
+            navigationMock.Setup(a => a.NavigateToCreateUser()).Returns(Task.CompletedTask);
+
+            LoginViewModel viewModel = new LoginViewModel(authMock.Object, navigationMock.Object)
+            {
+                Email = "email@gmail.com",
+                Password = "password"
+            };
+
+            viewModel.OnCreateAccount();
+
+            Assert.IsTrue(string.IsNullOrEmpty(viewModel.Email));
+            Assert.IsTrue(string.IsNullOrEmpty(viewModel.Password));
+            navigationMock.Verify(a => a.NavigateToCreateUser(), Times.Once);
         }
     }
 }
