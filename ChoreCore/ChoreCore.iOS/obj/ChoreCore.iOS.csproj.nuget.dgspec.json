@@ -123,6 +123,10 @@
               "target": "Package",
               "version": "[3.1.0.2, )"
             },
+            "Plugin.FirebaseStorage": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
             "Splat": {
               "target": "Package",
               "version": "[9.4.5, )"

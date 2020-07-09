@@ -7,6 +7,7 @@
   <ItemGroup>
     <PackageReference Include="GoogleMaps.LocationServices" Version="1.2.0.5" />
     <PackageReference Include="Plugin.CloudFirestore" Version="3.1.0.2" />
+    <PackageReference Include="Plugin.FirebaseStorage" Version="3.1.0" />
     <PackageReference Include="Splat" Version="9.4.5" />
   </ItemGroup>
 

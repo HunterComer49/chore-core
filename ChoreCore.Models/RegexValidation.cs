@@ -2,7 +2,7 @@
 {
     public class RegexValidation
     {
-        public const string PhoneNumberPattern = @"^((\+){0,1}91(\s){0,1}(\-){0,1}(\s){0,1}){0,1}9[0-9](\s){0,1}(\-){0,1}(\s){0,1}[1-9]{1}[0-9]{7}$";
+        public const string PhoneNumberPattern = @"^\(?\d{3}\)?[-\.]? *\d{3}[-\.]? *[-\.]?\d{4}$";
 
         public const string EmailPattern = @"^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$";
 

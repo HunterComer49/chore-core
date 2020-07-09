@@ -16,6 +16,8 @@ namespace ChoreCore.Models
         [ServerTimestamp]
         public Timestamp UpdatedDate { get; set; }
 
+        public bool IsCoreMember { get; set; }
+
         public string FirstName { get; set; }
 
         public string LastName { get; set; }
@@ -30,6 +32,8 @@ namespace ChoreCore.Models
 
         public string State { get; set; } 
 
-        public int Zip { get; set; }
+        public string Zip { get; set; }
+
+        public double OverallRating { get; set; }
     }
 }

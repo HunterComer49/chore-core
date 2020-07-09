@@ -9,12 +9,13 @@ namespace ChoreCore
         public async Task NavigateToForgotPassword()
         {
             await Application.Current.MainPage.Navigation
-                 .PushAsync(new ForgotPasswordPage());
+                  .PushAsync(new ForgotPasswordPage());
         }
 
-        public Task NavigateToHomePage()
+        public async Task NavigateToHomePage()
         {
-            throw new System.NotImplementedException();
+            await Application.Current.MainPage.Navigation
+                  .PushAsync(new MainPage());
         }
 
         public async Task NavigateToLogin()
@@ -29,9 +30,10 @@ namespace ChoreCore
                   .PushAsync(new CreateUserPage());
         }
 
-        public Task NavigateToNewUserInfo()
+        public async Task NavigateToNewUserInfo()
         {
-            throw new System.NotImplementedException();
+            await Application.Current.MainPage.Navigation
+                  .PushAsync(new NewUserInfoPage());
         }
     }
 }

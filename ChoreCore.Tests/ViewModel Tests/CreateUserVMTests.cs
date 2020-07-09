@@ -1,4 +1,5 @@
 ﻿using ChoreCore.Controllers;
+using ChoreCore.Models;
 using ChoreCore.ViewModels;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
@@ -75,7 +76,7 @@ namespace ChoreCore.Tests.ViewModel_Tests
             navigationMock.Setup(a => a.NavigateToNewUserInfo()).Returns(Task.CompletedTask);
 
             Mock<IUserController> userControllerMock = new Mock<IUserController>(MockBehavior.Strict);
-            userControllerMock.Setup(a => a.CreateNewUser(It.IsAny<string>())).Returns(Task.CompletedTask);
+            userControllerMock.Setup(a => a.CreateNewUser(It.IsAny<string>())).Returns(Task.FromResult(new User()));
 
             CreateUserViewModel viewModel = new CreateUserViewModel(authMock.Object, navigationMock.Object,
                 userControllerMock.Object)

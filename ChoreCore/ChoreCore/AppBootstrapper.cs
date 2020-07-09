@@ -1,5 +1,6 @@
 ﻿using ChoreCore.Controllers;
 using ChoreCore.Managers;
+using Splat;
 
 namespace ChoreCore
 {
@@ -12,12 +13,18 @@ namespace ChoreCore
 
         private void RegisterServices()
         {
-            Splat.Locator.CurrentMutable.Register(() => new NavigationService(), typeof(INavigationService));
+            Locator.CurrentMutable.Register(() => new NavigationService(), typeof(INavigationService));
 
             //User registers
-            Splat.Locator.CurrentMutable.Register(() => new UserValidation(), typeof(IUserValidation));
-            Splat.Locator.CurrentMutable.Register(() => new UserManager(), typeof(IUserManager));
-            Splat.Locator.CurrentMutable.Register(() => new UserController(), typeof(IUserController));
+            Locator.CurrentMutable.Register(() => new UserValidation(), typeof(IUserValidation));
+            Locator.CurrentMutable.Register(() => new UserManager(), typeof(IUserManager));
+            Locator.CurrentMutable.Register(() => new UserController(), typeof(IUserController));
+
+            //Geopoint 
+            Locator.CurrentMutable.Register(() => new GeopointManager(), typeof(IGeopointManager));
+
+            //Singleton
+            Locator.CurrentMutable.RegisterLazySingleton(() => new ConstantUserInstance(), typeof(IConstantUserInstance));
         }
     }
 }

@@ -129,6 +129,21 @@
           "build/monoandroid90/_._": {}
         }
       },
+      "Plugin.FirebaseStorage/3.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Firebase.Storage": "71.1602.0"
+        },
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
+        "compile": {
+          "lib/monoandroid90/Plugin.FirebaseStorage.dll": {}
+        },
+        "runtime": {
+          "lib/monoandroid90/Plugin.FirebaseStorage.dll": {}
+        }
+      },
       "Splat/9.4.5": {
         "type": "package",
         "compile": {
@@ -1263,6 +1278,31 @@
           "build/MonoAndroid90/_._": {}
         }
       },
+      "Xamarin.Firebase.Storage/71.1602.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Android.Arch.Core.Common": "1.1.1.1",
+          "Xamarin.Android.Arch.Core.Runtime": "1.1.1.1",
+          "Xamarin.Android.Arch.Lifecycle.Common": "1.1.1.1",
+          "Xamarin.Android.Arch.Lifecycle.Runtime": "1.1.1.1",
+          "Xamarin.Build.Download": "0.4.11",
+          "Xamarin.Firebase.Common": "71.1610.0",
+          "Xamarin.GooglePlayServices.Base": "71.1610.0",
+          "Xamarin.GooglePlayServices.Tasks": "71.1601.0"
+        },
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
+        "compile": {
+          "lib/monoandroid90/Xamarin.Firebase.Storage.dll": {}
+        },
+        "runtime": {
+          "lib/monoandroid90/Xamarin.Firebase.Storage.dll": {}
+        },
+        "build": {
+          "build/MonoAndroid90/_._": {}
+        }
+      },
       "Xamarin.Forms/4.5.0.495": {
         "type": "package",
         "dependencies": {
@@ -1659,6 +1699,7 @@
           "ChoreCore.Models": "1.0.0",
           "GoogleMaps.LocationServices": "1.2.0.5",
           "Plugin.CloudFirestore": "3.1.0.2",
+          "Plugin.FirebaseStorage": "3.1.0",
           "Splat": "9.4.5"
         },
         "compile": {
@@ -1864,6 +1905,23 @@
         "lib/xamarinios10/Plugin.CloudFirestore.xml",
         "plugin.cloudfirestore.3.1.0.2.nupkg.sha512",
         "plugin.cloudfirestore.nuspec"
+      ]
+    },
+    "Plugin.FirebaseStorage/3.1.0": {
+      "sha512": "58XJ7yPRe2OuzjY8/sJt5oNtQEVm2GrpOL0Om8+CtRcHzCTxxljtdpLc/lp3s1iAKdcwlTgtXO3N4K706+MruA==",
+      "type": "package",
+      "path": "plugin.firebasestorage/3.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid90/Plugin.FirebaseStorage.dll",
+        "lib/monoandroid90/Plugin.FirebaseStorage.xml",
+        "lib/netstandard2.0/Plugin.FirebaseStorage.dll",
+        "lib/netstandard2.0/Plugin.FirebaseStorage.xml",
+        "lib/xamarinios10/Plugin.FirebaseStorage.dll",
+        "lib/xamarinios10/Plugin.FirebaseStorage.xml",
+        "plugin.firebasestorage.3.1.0.nupkg.sha512",
+        "plugin.firebasestorage.nuspec"
       ]
     },
     "Splat/9.4.5": {
@@ -3148,6 +3206,20 @@
         "lib/monoandroid90/Xamarin.Firebase.ProtoliteWellKnownTypes.dll",
         "xamarin.firebase.protolitewellknowntypes.71.1601.0.nupkg.sha512",
         "xamarin.firebase.protolitewellknowntypes.nuspec"
+      ]
+    },
+    "Xamarin.Firebase.Storage/71.1602.0": {
+      "sha512": "AU+OGC0Sokzul3/WxMe46tNFaB8y1Sln7Ynes+21OMSdAMw71dHPHP3ax0wZfqqv1/mq3jU4IkhbmBf1dttFQA==",
+      "type": "package",
+      "path": "xamarin.firebase.storage/71.1602.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/MonoAndroid90/Xamarin.Firebase.Storage.targets",
+        "lib/monoandroid90/Xamarin.Firebase.Storage.dll",
+        "proguard/MonoAndroid90/proguard.txt",
+        "xamarin.firebase.storage.71.1602.0.nupkg.sha512",
+        "xamarin.firebase.storage.nuspec"
       ]
     },
     "Xamarin.Forms/4.5.0.495": {

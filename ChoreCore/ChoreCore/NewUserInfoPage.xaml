@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ChoreCore.NewUserInfoPage"
+             NavigationPage.HasBackButton="False">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.7*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="6*" />
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="0"
+                   Text="Chore Core"
+                   FontSize="Title"
+                   TextColor="White"
+                   BackgroundColor="Black"
+                   HorizontalOptions="Fill"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center" />
+            <Label Grid.Row="1"
+                   Text="Create an Account"
+                   FontSize="Title"
+                   TextColor="Black"
+                   HorizontalOptions="Center"
+                   VerticalTextAlignment="Center" />
+
+            <StackLayout Grid.Row="2"
+                         Margin="40,30">
+                <Entry Placeholder="First Name"
+                       Text="{Binding User.FirstName, Mode=TwoWay}" />
+
+                <Entry Placeholder="Last Name"
+                       Text="{Binding User.LastName, Mode=TwoWay}" />
+
+                <Entry Placeholder="Phone Number"
+                       Text="{Binding User.PhoneNumber, Mode=TwoWay}" />
+
+                <Entry Placeholder="Street"
+                       Text="{Binding User.Street, Mode=TwoWay}" />
+
+                <Entry Placeholder="City"
+                       Text="{Binding User.City, Mode=TwoWay}" />
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Picker Grid.Column="0"
+                            Title="State"
+                            ItemsSource="{Binding States, Mode=OneWay}"
+                            SelectedItem="{Binding User.State, Mode=TwoWay}" />
+
+                    <Entry Grid.Column="2"
+                           Placeholder="Zip Code"
+                           Text="{Binding User.Zip, Mode=TwoWay}" />
+                </Grid>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Button Grid.Column="0"
+                            Text="Skip"
+                            Command="{Binding SkipCommand}" />
+                    <Button Grid.Column="1"
+                            Text="Submit"
+                            Command="{Binding SubmitCommand}" />
+                </Grid>
+                
+                <Label Text="{Binding ErrorMessage, Mode=OneWay}"
+                       TextColor="Red"
+                       HorizontalTextAlignment="Center" />
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

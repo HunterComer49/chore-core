@@ -139,6 +139,15 @@
           "lib/netstandard2.0/Plugin.CloudFirestore.dll": {}
         }
       },
+      "Plugin.FirebaseStorage/3.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Plugin.FirebaseStorage.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Plugin.FirebaseStorage.dll": {}
+        }
+      },
       "Splat/9.4.5": {
         "type": "package",
         "compile": {
@@ -285,6 +294,7 @@
           "ChoreCore.Models": "1.0.0",
           "GoogleMaps.LocationServices": "1.2.0.5",
           "Plugin.CloudFirestore": "3.1.0.2",
+          "Plugin.FirebaseStorage": "3.1.0",
           "Splat": "9.4.5"
         },
         "compile": {
@@ -630,6 +640,23 @@
         "lib/xamarinios10/Plugin.CloudFirestore.xml",
         "plugin.cloudfirestore.3.1.0.2.nupkg.sha512",
         "plugin.cloudfirestore.nuspec"
+      ]
+    },
+    "Plugin.FirebaseStorage/3.1.0": {
+      "sha512": "58XJ7yPRe2OuzjY8/sJt5oNtQEVm2GrpOL0Om8+CtRcHzCTxxljtdpLc/lp3s1iAKdcwlTgtXO3N4K706+MruA==",
+      "type": "package",
+      "path": "plugin.firebasestorage/3.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid90/Plugin.FirebaseStorage.dll",
+        "lib/monoandroid90/Plugin.FirebaseStorage.xml",
+        "lib/netstandard2.0/Plugin.FirebaseStorage.dll",
+        "lib/netstandard2.0/Plugin.FirebaseStorage.xml",
+        "lib/xamarinios10/Plugin.FirebaseStorage.dll",
+        "lib/xamarinios10/Plugin.FirebaseStorage.xml",
+        "plugin.firebasestorage.3.1.0.nupkg.sha512",
+        "plugin.firebasestorage.nuspec"
       ]
     },
     "Splat/9.4.5": {
