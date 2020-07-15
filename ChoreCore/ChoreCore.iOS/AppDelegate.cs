@@ -23,6 +23,9 @@ namespace ChoreCore.iOS
             RegisterServices();
 
             Forms.Init();
+
+            Xamarin.FormsMaps.Init();
+
             LoadApplication(new App());
 
             Firebase.Core.App.Configure();

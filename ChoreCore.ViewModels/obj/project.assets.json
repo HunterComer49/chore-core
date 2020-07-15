@@ -65,7 +65,7 @@
           "lib/netstandard2.0/Plugin.FirebaseStorage.dll": {}
         }
       },
-      "Splat/9.4.5": {
+      "Splat/9.5.6": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Splat.dll": {}
@@ -151,7 +151,7 @@
           "GoogleMaps.LocationServices": "1.2.0.5",
           "Plugin.CloudFirestore": "3.1.0.2",
           "Plugin.FirebaseStorage": "3.1.0",
-          "Splat": "9.4.5"
+          "Splat": "9.5.6"
         },
         "compile": {
           "bin/placeholder/ChoreCore.Managers.dll": {}
@@ -383,10 +383,10 @@
         "plugin.firebasestorage.nuspec"
       ]
     },
-    "Splat/9.4.5": {
-      "sha512": "KOFrxLdMQg0geu2EMSAL+H9ZgsMY4lgm0Fd71wqod7TBbEM28CutGZ+hg71/U/c/lLx2g409UoepezKHHm9jbA==",
+    "Splat/9.5.6": {
+      "sha512": "fnHiotCZUNq/ccIskm/0g9poLnUW2godyiymbTfw1Nh77OxPLsa+bsjb1g1hyhuSBuoGvnUEhLZfX9Fqc2n4cw==",
       "type": "package",
-      "path": "splat/9.4.5",
+      "path": "splat/9.5.6",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -398,7 +398,7 @@
         "lib/uap10.0.16299/Splat.dll",
         "lib/uap10.0.16299/Splat.pri",
         "lib/uap10.0.16299/Splat.xml",
-        "splat.9.4.5.nupkg.sha512",
+        "splat.9.5.6.nupkg.sha512",
         "splat.nuspec"
       ]
     },
@@ -662,7 +662,7 @@
       "ChoreCore.Controllers >= 1.0.0",
       "ChoreCore.Models >= 1.0.0",
       "NETStandard.Library >= 2.0.3",
-      "Splat >= 9.4.5"
+      "Splat >= 9.5.6"
     ]
   },
   "packageFolders": {
@@ -722,7 +722,7 @@
           },
           "Splat": {
             "target": "Package",
-            "version": "[9.4.5, )"
+            "version": "[9.5.6, )"
           }
         },
         "imports": [

@@ -11,7 +11,7 @@ namespace ChoreCore
 
             new AppBootstrapper();
 
-            MainPage = new NavigationPage(new LoginPage());
+            MainPage = new Xamarin.Forms.NavigationPage(new LoginPage());
         }
 
         protected override void OnStart()
