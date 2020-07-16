@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:abstractions="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             mc:Ignorable="d"
+             x:Class="ChoreCore.ProfileSettingsPage"
+             NavigationPage.HasBackButton="False">
+    <ContentPage.Content>
+        <ScrollView VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand">
+            <Grid Margin="40,30">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <abstractions:CircleImage Grid.Row="0"
+                                          Source="{Binding ProfilePic, Mode=OneWay}"
+                                          Aspect="AspectFit"
+                                          BorderThickness="2"
+                                          BorderColor="LightGray"
+                                          WidthRequest="100"
+                                          HeightRequest="100" />
+                <Label Grid.Row="1"
+                       HorizontalOptions="Center"
+                       FontSize="Medium">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Change Profile Picture"
+                                  TextColor="CadetBlue"
+                                  TextDecorations="Underline">
+                                <Span.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding ChangeProfilePicture}" />
+                                </Span.GestureRecognizers>
+                            </Span>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Entry Grid.Row="2"
+                       Placeholder="First Name"
+                       Text="{Binding User.FirstName, Mode=TwoWay}" />
+
+                <Entry Grid.Row="3"
+                       Placeholder="Last Name"
+                       Text="{Binding User.LastName, Mode=TwoWay}" />
+
+                <Entry Grid.Row="4"
+                       Placeholder="Phone Number"
+                       Text="{Binding User.PhoneNumber, Mode=TwoWay}" />
+
+                <Entry Grid.Row="5"
+                       Placeholder="Street"
+                       Text="{Binding User.Street, Mode=TwoWay}" />
+
+                <Entry Grid.Row="6"
+                       Placeholder="City"
+                       Text="{Binding User.City, Mode=TwoWay}" />
+
+                <Grid Grid.Row="7">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Picker Grid.Column="0"
+                            Title="State"
+                            ItemsSource="{Binding States, Mode=OneWay}"
+                            SelectedItem="{Binding User.State, Mode=TwoWay}" />
+
+                    <Entry Grid.Column="2"
+                           Placeholder="Zip Code"
+                           Text="{Binding User.Zip, Mode=TwoWay}" />
+                </Grid>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

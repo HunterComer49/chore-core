@@ -4,22 +4,27 @@ using Xamarin.Forms;
 
 namespace ChoreCore.ViewModels
 {
-    public class LoginViewModel : BaseViewModel
+    public class LoginViewModel : BaseViewModel, ILoginViewModel
     {
         #region Private Variables
         private IAuth _auth;
         private INavigationService _navigation;
+        private IUserController _userController;
         private string _email;
         private string _password;
         private bool _errorVis;
         #endregion
 
-        public LoginViewModel(IAuth authentication = null, INavigationService navigation = null)
+        public LoginViewModel(IAuth authentication = null, INavigationService navigation = null, 
+            IUserController userController = null)
         {
             _auth = authentication ?? DependencyService.Get<IAuth>();
             _navigation = navigation ?? (INavigationService)Splat.Locator.Current.GetService(typeof(INavigationService));
+            _userController = userController ?? (IUserController)Splat.Locator.Current.GetService(typeof(IUserController));
 
             ErrorVis = false;
+            Email = "aadmproductions@gmail.com";
+            Password = "Passw0rd1#";
 
             LoginCommand = new RelayCommand(OnLogin);
             ForgotPasswordCommand = new RelayCommand(OnForgotPassword);
@@ -82,6 +87,9 @@ namespace ChoreCore.ViewModels
                 else
                 {
                     ErrorVis = false;
+
+                    await _userController.GetUserByEmail(Email);
+
                     await _navigation.NavigateToHomePage();
                 }
             }

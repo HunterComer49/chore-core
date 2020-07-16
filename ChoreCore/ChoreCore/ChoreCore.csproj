@@ -12,12 +12,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Assets\Images\emptyProfile.png" />
     <None Remove="Assets\Images\logo.png" />
+    <None Remove="Assets\Images\map.png" />
     <None Remove="Assets\Images\profile.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Assets\Images\emptyProfile.png" />
     <EmbeddedResource Include="Assets\Images\logo.png" />
+    <EmbeddedResource Include="Assets\Images\map.png" />
     <EmbeddedResource Include="Assets\Images\profile.png" />
   </ItemGroup>
 
@@ -25,6 +29,7 @@
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.6" />
     <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="3.1.6" />
     <PackageReference Include="Splat" Version="9.5.6" />
+    <PackageReference Include="Xam.Plugins.Forms.ImageCircle" Version="3.0.0.5" />
     <PackageReference Include="Xamarin.Forms" Version="4.7.0.1142" />
     <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
     <PackageReference Include="Xamarin.Forms.Maps" Version="4.7.0.1142" />
@@ -33,6 +38,12 @@
   <ItemGroup>
     <ProjectReference Include="..\..\ChoreCore.Controllers\ChoreCore.Controllers.csproj" />
     <ProjectReference Include="..\..\ChoreCore.ViewModels\ChoreCore.ViewModels.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="ProfileSettingsPage.xaml.cs">
+      <DependentUpon>ProfileSettingsPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
@@ -54,7 +65,7 @@
     <EmbeddedResource Update="NewUserInfoPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="ProfilePage.xaml">
+    <EmbeddedResource Update="ProfileSettingsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

@@ -4,7 +4,7 @@ using Xamarin.Forms;
 
 namespace ChoreCore.ViewModels
 {
-    public class ForgotPasswordViewModel : BaseViewModel
+    public class ForgotPasswordViewModel : BaseViewModel, IForgotPasswordViewModel
     {
         #region Private variables
         private IAuth _auth;
@@ -45,7 +45,7 @@ namespace ChoreCore.ViewModels
                 {
                     _errorVis = value;
                     OnPropertyChanged();
-                }    
+                }
             }
         }
         #endregion

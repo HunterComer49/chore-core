@@ -1,2 +1,0 @@
-C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore\ChoreCore.Android\obj\Debug\90\android\assets\System.Xml.dll
-C:\Users\huntc\OneDrive\Documents\Projects\chore-core\ChoreCore\ChoreCore.Android\obj\Debug\90\android\bin\mono.android.jar

@@ -69,6 +69,7 @@
     <None Include="Entitlements.plist" />
     <BundleResource Include="GoogleService-Info.plist" />
     <None Include="Info.plist" />
+    <Compile Include="PhotoPickerService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -154,5 +155,11 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\map.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\emptyProfile.png" />
   </ItemGroup>
 </Project>

@@ -47,5 +47,33 @@ namespace ChoreCore.Controllers
 
             return result;
         }
+
+        public async Task<User> GetUserByEmail(string email)
+        {
+            User user = await _userManager.GetUser(email);
+
+            _constantUserInstance.SetUser(user);
+
+            Stream profilePic = await _userManager.GetProfilePic(user.Id);
+
+            if (profilePic != null)
+            {
+                _constantUserInstance.SetProfilePic(profilePic);
+            }
+
+            return user;
+        }
+
+        public async Task<string> ChangeProfilePicture(string userId, Stream stream)
+        {
+            string message = await _userManager.UploadProfilePic(userId, stream);
+
+            if (string.IsNullOrEmpty(message))
+            {
+                _constantUserInstance.SetProfilePic(await _userManager.GetProfilePic(userId));
+            }
+
+            return message;
+        }
     }
 }

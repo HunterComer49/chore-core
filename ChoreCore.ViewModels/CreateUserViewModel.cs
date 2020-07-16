@@ -9,7 +9,7 @@ using Xamarin.Forms;
 [assembly: InternalsVisibleTo("ChoreCore.Tests")]
 namespace ChoreCore.ViewModels
 {
-    public class CreateUserViewModel : BaseViewModel
+    public class CreateUserViewModel : BaseViewModel, ICreateUserViewModel
     {
         #region Private Variables
         private IAuth _auth;
@@ -25,7 +25,7 @@ namespace ChoreCore.ViewModels
         private string _emailError;
         #endregion
 
-        public CreateUserViewModel(IAuth auth = null, INavigationService navigation = null, 
+        public CreateUserViewModel(IAuth auth = null, INavigationService navigation = null,
             IUserController userController = null)
         {
             _auth = auth ?? DependencyService.Get<IAuth>();

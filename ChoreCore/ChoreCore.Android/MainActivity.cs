@@ -6,6 +6,11 @@ using Xamarin.Forms;
 using ChoreCore.Controllers;
 using ChoreCore.Android;
 using Android;
+using ImageCircle.Forms.Plugin.Droid;
+using Android.Net;
+using System.IO;
+using Android.Content;
+using System.Threading.Tasks;
 
 namespace ChoreCore.Droid
 {
@@ -20,6 +25,8 @@ namespace ChoreCore.Droid
             Manifest.Permission.AccessFineLocation
         };
 
+        internal static MainActivity Instance { get; private set; }
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             TabLayoutResource = Resource.Layout.Tabbar;
@@ -29,12 +36,16 @@ namespace ChoreCore.Droid
 
             base.OnCreate(savedInstanceState);
 
+            ImageCircleRenderer.Init();
+
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             Forms.Init(this, savedInstanceState);
 
             Xamarin.FormsMaps.Init(this, savedInstanceState);
 
             LoadApplication(new App());
+
+            Instance = this;
         }
 
         protected override void OnStart()
@@ -49,6 +60,33 @@ namespace ChoreCore.Droid
                 }
             }
         }
+
+        #region Field, property, and method for Picture Picker
+        public static readonly int PickImageId = 1000;
+
+        public TaskCompletionSource<Stream> PickImageTaskCompletionSource { get; set; }
+
+        protected override void OnActivityResult(int requestCode, Result resultCode, Intent intent)
+        {
+            base.OnActivityResult(requestCode, resultCode, intent);
+
+            if (requestCode == PickImageId)
+            {
+                if ((resultCode == Result.Ok) && (intent != null))
+                {
+                    Uri uri = intent.Data;
+                    Stream stream = ContentResolver.OpenInputStream(uri);
+
+                    //Set the Stream as the completion of the Task
+                    PickImageTaskCompletionSource.SetResult(stream);
+                }
+                else
+                {
+                    PickImageTaskCompletionSource.SetResult(null);
+                }
+            }
+        }
+        #endregion
 
         //public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Permission[] grantResults)
         //{
@@ -68,6 +106,7 @@ namespace ChoreCore.Droid
         private static void RegisterServices()
         {
             DependencyService.Register<IAuth, AuthDroid>();
+            DependencyService.Register<IPhotoPickerService, PhotoPickerService>();
         }
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Permission[] grantResults)

@@ -1,6 +1,7 @@
 ﻿using ChoreCore.Models;
 using Plugin.CloudFirestore;
 using Plugin.FirebaseStorage;
+using System;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
@@ -70,18 +71,40 @@ namespace ChoreCore.Managers
             return query.ToObjects<User>().First();
         }
 
-        public async Task UploadProfilePic(string userId, Stream stream)
+        public async Task<string> UploadProfilePic(string userId, Stream stream)
         {
+            string message = "";
+
             IStorageReference reference = _storageReference.GetChild($"ProfilePics/{userId}.jpg");
 
-            await reference.PutStreamAsync(stream);
+            try
+            {
+                await reference.PutStreamAsync(stream);
+            }
+            catch (Exception e)
+            {
+                message = e.Message;
+            }
+
+            return message;
         }
 
         public async Task<Stream> GetProfilePic(string userId)
         {
-            var reference = _storageReference.GetChild($"ProfilePics/{userId}.jpg");
+            Stream stream = null;
 
-            return await reference.GetStreamAsync();
+            IStorageReference reference = _storageReference.GetChild($"ProfilePics/{userId}.jpg");
+
+            try
+            {
+                stream = await reference.GetStreamAsync();
+            }
+            catch (FirebaseStorageException e)
+            {
+                // possible do something here later??
+            }
+
+            return stream;
         }
     }
 }

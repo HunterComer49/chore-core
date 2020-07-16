@@ -8,11 +8,17 @@
             x:Class="ChoreCore.NavigationPage"
             NavigationPage.HasBackButton="False">
 
-    <NavigationPage Title="Profile"
-                    IconImageSource="profile.png">
+    <NavigationPage Title="Map"
+                    IconImageSource="map.png">
         <x:Arguments>
-            <chorecore:ProfilePage />
+            <chorecore:MapPage />
         </x:Arguments>
     </NavigationPage>
 
+    <NavigationPage Title="Profile"
+                    IconImageSource="profile.png">
+        <x:Arguments>
+            <chorecore:ProfileSettingsPage />
+        </x:Arguments>
+    </NavigationPage>
 </TabbedPage>

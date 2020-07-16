@@ -6,15 +6,16 @@ using Xamarin.Forms.Xaml;
 namespace ChoreCore
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class MapPage : ContentPage
+    public partial class ProfileSettingsPage : ContentPage
     {
-        private IMapViewModel viewModel;
+        private IProfileSettingsViewModel viewModel;
 
-        public MapPage()
+        public ProfileSettingsPage()
         {
             InitializeComponent();
 
-            viewModel = (IMapViewModel)Locator.Current.GetService(typeof(IMapViewModel));
+            viewModel = (IProfileSettingsViewModel)Locator.Current.GetService(typeof(IProfileSettingsViewModel));
+
             BindingContext = viewModel;
         }
     }

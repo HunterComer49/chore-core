@@ -7,7 +7,7 @@ using System.Windows.Input;
 
 namespace ChoreCore.ViewModels
 {
-    public class NewUserInfoViewModel : BaseViewModel
+    public class NewUserInfoViewModel : BaseViewModel, INewUserInfoViewModel
     {
         #region Private Variables
         private User _user;

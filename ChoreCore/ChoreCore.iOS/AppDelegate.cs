@@ -1,5 +1,6 @@
 ﻿using ChoreCore.Controllers;
 using Foundation;
+using ImageCircle.Forms.Plugin.iOS;
 using UIKit;
 using Xamarin.Forms;
 
@@ -24,6 +25,8 @@ namespace ChoreCore.iOS
 
             Forms.Init();
 
+            ImageCircleRenderer.Init();
+
             Xamarin.FormsMaps.Init();
 
             LoadApplication(new App());
@@ -35,6 +38,7 @@ namespace ChoreCore.iOS
         private static void RegisterServices()
         {
             DependencyService.Register<IAuth, AuthiOS>();
+            DependencyService.Register<IPhotoPickerService, PhotoPickerService>();
         }
     }
 }
