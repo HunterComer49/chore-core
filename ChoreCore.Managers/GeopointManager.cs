@@ -6,7 +6,7 @@ namespace ChoreCore.Managers
     {
         public MapPoint GetGeopoint(string address)
         {
-            GoogleLocationService locationServices = new GoogleLocationService("AIzaSyDpwsXtkIEk9y9m2Uo0y51uSlraZSEqmSY");
+            GoogleLocationService locationServices = new GoogleLocationService(Models.Constants.GoogleAPIKey);
             return locationServices.GetLatLongFromAddress(address);
         }
 

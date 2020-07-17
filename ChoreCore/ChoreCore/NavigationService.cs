@@ -12,10 +12,10 @@ namespace ChoreCore
                   .PushAsync(new ForgotPasswordPage());
         }
 
-        public async Task NavigateToHomePage()
+        public async Task NavigateToHomePage(int index = 0)
         {
             await Application.Current.MainPage.Navigation
-                  .PushAsync(new NavigationPage());
+                  .PushAsync(new NavigationPage(index));
         }
 
         public async Task NavigateToLogin()

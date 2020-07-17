@@ -16,7 +16,7 @@ namespace ChoreCore.Tests.ViewModel_Tests
         public void TestOnSkip()
         {
             Mock<INavigationService> navigationMock = new Mock<INavigationService>(MockBehavior.Strict);
-            navigationMock.Setup(a => a.NavigateToHomePage()).Returns(Task.CompletedTask);
+            navigationMock.Setup(a => a.NavigateToHomePage(It.IsAny<int>())).Returns(Task.CompletedTask);
 
             Mock<IUserController> userControllerMock = new Mock<IUserController>(MockBehavior.Strict);
 
@@ -28,14 +28,14 @@ namespace ChoreCore.Tests.ViewModel_Tests
 
             viewModel.OnSkip();
 
-            navigationMock.Verify(a => a.NavigateToHomePage(), Times.Once);
+            navigationMock.Verify(a => a.NavigateToHomePage(It.IsAny<int>()), Times.Once);
         }
 
         [TestMethod]
         public void TestOnSubmitNoChanges()
         {
             Mock<INavigationService> navigationMock = new Mock<INavigationService>(MockBehavior.Strict);
-            navigationMock.Setup(a => a.NavigateToHomePage()).Returns(Task.CompletedTask);
+            navigationMock.Setup(a => a.NavigateToHomePage(It.IsAny<int>())).Returns(Task.CompletedTask);
 
             Mock<IUserController> userControllerMock = new Mock<IUserController>(MockBehavior.Strict);
             userControllerMock.Setup(a => a.UpdateUser(It.IsAny<User>(), It.IsAny<Stream>())).Returns(Task.FromResult(""));
@@ -48,7 +48,7 @@ namespace ChoreCore.Tests.ViewModel_Tests
 
             viewModel.OnSubmit();
 
-            navigationMock.Verify(a => a.NavigateToHomePage(), Times.Once);
+            navigationMock.Verify(a => a.NavigateToHomePage(It.IsAny<int>()), Times.Once);
             userControllerMock.Verify(a => a.UpdateUser(It.IsAny<User>(), It.IsAny<Stream>()), Times.Never);
         }
 
@@ -56,7 +56,7 @@ namespace ChoreCore.Tests.ViewModel_Tests
         public void TestOnSubmitSuccess()
         {
             Mock<INavigationService> navigationMock = new Mock<INavigationService>(MockBehavior.Strict);
-            navigationMock.Setup(a => a.NavigateToHomePage()).Returns(Task.CompletedTask);
+            navigationMock.Setup(a => a.NavigateToHomePage(It.IsAny<int>())).Returns(Task.CompletedTask);
 
             Mock<IUserController> userControllerMock = new Mock<IUserController>(MockBehavior.Strict);
             userControllerMock.Setup(a => a.UpdateUser(It.IsAny<User>(), It.IsAny<Stream>())).Returns(Task.FromResult(""));
@@ -77,14 +77,14 @@ namespace ChoreCore.Tests.ViewModel_Tests
             viewModel.OnSubmit();
 
             userControllerMock.Verify(a => a.UpdateUser(It.IsAny<User>(), It.IsAny<Stream>()), Times.Once);
-            navigationMock.Verify(a => a.NavigateToHomePage(), Times.Once);
+            navigationMock.Verify(a => a.NavigateToHomePage(It.IsAny<int>()), Times.Once);
         }
 
         [TestMethod]
         public void TestOnSubmitFail()
         {
             Mock<INavigationService> navigationMock = new Mock<INavigationService>(MockBehavior.Strict);
-            navigationMock.Setup(a => a.NavigateToHomePage()).Returns(Task.CompletedTask);
+            navigationMock.Setup(a => a.NavigateToHomePage(It.IsAny<int>())).Returns(Task.CompletedTask);
 
             Mock<IUserController> userControllerMock = new Mock<IUserController>(MockBehavior.Strict);
             userControllerMock.Setup(a => a.UpdateUser(It.IsAny<User>(), It.IsAny<Stream>())).Returns(Task.FromResult("Failed"));
@@ -106,7 +106,7 @@ namespace ChoreCore.Tests.ViewModel_Tests
 
             userControllerMock.Verify(a => a.UpdateUser(It.IsAny<User>(), It.IsAny<Stream>()), Times.Once);
             Assert.AreEqual("Failed", viewModel.ErrorMessage);
-            navigationMock.Verify(a => a.NavigateToHomePage(), Times.Never);
+            navigationMock.Verify(a => a.NavigateToHomePage(It.IsAny<int>()), Times.Never);
         }
     }
 }

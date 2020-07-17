@@ -20,6 +20,7 @@
                     <RowDefinition Height="*" />
                     <RowDefinition Height="*" />
                     <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
@@ -83,6 +84,24 @@
                            Placeholder="Zip Code"
                            Text="{Binding User.Zip, Mode=TwoWay}" />
                 </Grid>
+                
+                <Grid Grid.Row="8">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Button Grid.Column="0"
+                            Text="Cancel"
+                            Command="{Binding CancelCommand}" />
+                    <Button Grid.Column="1"
+                            Text="Submit"
+                            Command="{Binding SubmitCommand}" />
+                </Grid>
+
+                <Label Text="{Binding ErrorMessage, Mode=OneWay}"
+                       TextColor="Red"
+                       HorizontalTextAlignment="Center" />
             </Grid>
         </ScrollView>
     </ContentPage.Content>

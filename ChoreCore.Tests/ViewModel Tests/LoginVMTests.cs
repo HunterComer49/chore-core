@@ -1,4 +1,5 @@
 using ChoreCore.Controllers;
+using ChoreCore.Models;
 using ChoreCore.ViewModels;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
@@ -17,9 +18,13 @@ namespace ChoreCore.Tests.ViewModel_Tests
                     .Returns(Task.FromResult("token"));
 
             Mock<INavigationService> navigationMock = new Mock<INavigationService>(MockBehavior.Strict);
-            navigationMock.Setup(a => a.NavigateToHomePage()).Returns(Task.CompletedTask);
+            navigationMock.Setup(a => a.NavigateToHomePage(It.IsAny<int>())).Returns(Task.CompletedTask);
 
-            LoginViewModel viewModel = new LoginViewModel(authMock.Object, navigationMock.Object)
+            Mock<IUserController> userControllerMock = new Mock<IUserController>(MockBehavior.Strict);
+            userControllerMock.Setup(a => a.GetUserByEmail(It.IsAny<string>())).Returns(Task.FromResult(new User()));
+
+            LoginViewModel viewModel = new LoginViewModel(authMock.Object, navigationMock.Object,
+                userControllerMock.Object)
             {
                 Email = "email@gmail.com",
                 Password = "password"
@@ -28,7 +33,7 @@ namespace ChoreCore.Tests.ViewModel_Tests
             viewModel.OnLogin();
 
             authMock.Verify(a => a.LoginWithEmailPassword(It.IsAny<string>(), It.IsAny<string>()), Times.Once);
-            navigationMock.Verify(a => a.NavigateToHomePage(), Times.Once);
+            navigationMock.Verify(a => a.NavigateToHomePage(It.IsAny<int>()), Times.Once);
             Assert.IsFalse(viewModel.ErrorVis);
         }
 
@@ -59,7 +64,7 @@ namespace ChoreCore.Tests.ViewModel_Tests
             Mock<IAuth> authMock = new Mock<IAuth>(MockBehavior.Strict);
 
             Mock<INavigationService> navigationMock = new Mock<INavigationService>(MockBehavior.Strict);
-            navigationMock.Setup(a => a.NavigateToHomePage()).Returns(Task.CompletedTask);
+            navigationMock.Setup(a => a.NavigateToHomePage(It.IsAny<int>())).Returns(Task.CompletedTask);
 
             LoginViewModel viewModel = new LoginViewModel(authMock.Object, navigationMock.Object)
             {
