@@ -71,6 +71,9 @@
     <None Include="Info.plist" />
     <Compile Include="PhotoPickerService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <BundleResource Include="Resources\OpenSans-Bold.ttf" />
+    <BundleResource Include="Resources\OpenSans-ExtraBold.ttf" />
+    <BundleResource Include="Resources\OpenSans-Regular.ttf" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
@@ -161,5 +164,11 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\emptyProfile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\profileSettings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\add.png" />
   </ItemGroup>
 </Project>

@@ -15,7 +15,7 @@ namespace ChoreCore
         public async Task NavigateToHomePage(int index = 0)
         {
             await Application.Current.MainPage.Navigation
-                  .PushAsync(new NavigationPage(index));
+                  .PushAsync(new MainNavigationPage());
         }
 
         public async Task NavigateToLogin()
@@ -34,6 +34,12 @@ namespace ChoreCore
         {
             await Application.Current.MainPage.Navigation
                   .PushAsync(new NewUserInfoPage());
+        }
+
+        public async Task NavigateToProfileSettings()
+        {
+            await Application.Current.MainPage.Navigation
+                  .PushAsync(new ProfileSettingsPage());
         }
     }
 }

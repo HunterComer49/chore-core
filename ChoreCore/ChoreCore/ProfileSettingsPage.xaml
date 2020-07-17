@@ -30,7 +30,7 @@
                                           Source="{Binding ProfilePic, Mode=OneWay}"
                                           Aspect="AspectFit"
                                           BorderThickness="2"
-                                          BorderColor="LightGray"
+                                          BorderColor="{StaticResource Accent}"
                                           WidthRequest="100"
                                           HeightRequest="100" />
                 <Label Grid.Row="1"
@@ -39,7 +39,7 @@
                     <Label.FormattedText>
                         <FormattedString>
                             <Span Text="Change Profile Picture"
-                                  TextColor="CadetBlue"
+                                  TextColor="{StaticResource Accent}"
                                   TextDecorations="Underline">
                                 <Span.GestureRecognizers>
                                     <TapGestureRecognizer Command="{Binding ChangeProfilePicture}" />
@@ -100,7 +100,7 @@
                 </Grid>
 
                 <Label Text="{Binding ErrorMessage, Mode=OneWay}"
-                       TextColor="Red"
+                       TextColor="{StaticResource Warning}"
                        HorizontalTextAlignment="Center" />
             </Grid>
         </ScrollView>

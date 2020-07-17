@@ -11,10 +11,10 @@
           "lib/netstandard2.0/GoogleMaps.LocationServices.dll": {}
         }
       },
-      "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
+      "Microsoft.Bcl.AsyncInterfaces/1.0.0": {
         "type": "package",
         "dependencies": {
-          "System.Threading.Tasks.Extensions": "4.5.4"
+          "System.Threading.Tasks.Extensions": "4.5.2"
         },
         "compile": {
           "ref/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.dll": {}
@@ -23,10 +23,10 @@
           "lib/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.dll": {}
         }
       },
-      "Microsoft.Extensions.Configuration.Abstractions/3.1.6": {
+      "Microsoft.Extensions.Configuration.Abstractions/5.0.0-preview.6.20305.6": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Primitives": "3.1.6"
+          "Microsoft.Extensions.Primitives": "5.0.0-preview.6.20305.6"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll": {}
@@ -35,7 +35,7 @@
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll": {}
         }
       },
-      "Microsoft.Extensions.DependencyInjection.Abstractions/3.1.6": {
+      "Microsoft.Extensions.DependencyInjection.Abstractions/5.0.0-preview.6.20305.6": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
@@ -44,10 +44,10 @@
           "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
         }
       },
-      "Microsoft.Extensions.FileProviders.Abstractions/3.1.6": {
+      "Microsoft.Extensions.FileProviders.Abstractions/5.0.0-preview.6.20305.6": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Primitives": "3.1.6"
+          "Microsoft.Extensions.Primitives": "5.0.0-preview.6.20305.6"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Abstractions.dll": {}
@@ -56,14 +56,14 @@
           "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Abstractions.dll": {}
         }
       },
-      "Microsoft.Extensions.Hosting.Abstractions/3.1.6": {
+      "Microsoft.Extensions.Hosting.Abstractions/5.0.0-preview.6.20305.6": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Bcl.AsyncInterfaces": "1.1.1",
-          "Microsoft.Extensions.Configuration.Abstractions": "3.1.6",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.6",
-          "Microsoft.Extensions.FileProviders.Abstractions": "3.1.6",
-          "Microsoft.Extensions.Logging.Abstractions": "3.1.6"
+          "Microsoft.Bcl.AsyncInterfaces": "1.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "5.0.0-preview.6.20305.6",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0-preview.6.20305.6",
+          "Microsoft.Extensions.FileProviders.Abstractions": "5.0.0-preview.6.20305.6",
+          "System.Threading.Tasks.Extensions": "4.5.2"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.Extensions.Hosting.Abstractions.dll": {}
@@ -72,20 +72,11 @@
           "lib/netstandard2.0/Microsoft.Extensions.Hosting.Abstractions.dll": {}
         }
       },
-      "Microsoft.Extensions.Logging.Abstractions/3.1.6": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll": {}
-        }
-      },
-      "Microsoft.Extensions.Primitives/3.1.6": {
+      "Microsoft.Extensions.Primitives/5.0.0-preview.6.20305.6": {
         "type": "package",
         "dependencies": {
-          "System.Memory": "4.5.2",
-          "System.Runtime.CompilerServices.Unsafe": "4.7.1"
+          "System.Memory": "4.5.3",
+          "System.Runtime.CompilerServices.Unsafe": "5.0.0-preview.6.20305.6"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll": {}
@@ -148,6 +139,68 @@
           "lib/netstandard2.0/Plugin.FirebaseStorage.dll": {}
         }
       },
+      "Sharpnado.MaterialFrame/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "3.4.0.1008975"
+        },
+        "compile": {
+          "lib/netstandard2.0/Sharpnado.MaterialFrame.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Sharpnado.MaterialFrame.dll": {}
+        }
+      },
+      "Sharpnado.Presentation.Forms/1.7.0": {
+        "type": "package",
+        "dependencies": {
+          "Sharpnado.MaterialFrame": "1.1.1",
+          "Sharpnado.Shadows": "1.0.2",
+          "Sharpnado.TaskLoaderView": "2.0.0",
+          "Sharpnado.TaskMonitor": "1.0.0",
+          "Xamarin.Forms": "3.6.0.220655"
+        },
+        "compile": {
+          "lib/netstandard2.0/Sharpnado.Presentation.Forms.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Sharpnado.Presentation.Forms.dll": {}
+        }
+      },
+      "Sharpnado.Shadows/1.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "3.6.0.220655"
+        },
+        "compile": {
+          "lib/netstandard2.0/Sharpnado.Shadows.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Sharpnado.Shadows.dll": {}
+        }
+      },
+      "Sharpnado.TaskLoaderView/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Sharpnado.TaskMonitor": "1.0.0",
+          "Xamarin.Forms": "3.4.0.33328"
+        },
+        "compile": {
+          "lib/netstandard2.0/Sharpnado.TaskLoaderView.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Sharpnado.TaskLoaderView.dll": {}
+        }
+      },
+      "Sharpnado.TaskMonitor/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Sharpnado.TaskMonitor.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Sharpnado.TaskMonitor.dll": {}
+        }
+      },
       "Splat/9.5.6": {
         "type": "package",
         "compile": {
@@ -166,7 +219,7 @@
           "lib/netstandard2.0/System.Buffers.dll": {}
         }
       },
-      "System.Memory/4.5.2": {
+      "System.Memory/4.5.3": {
         "type": "package",
         "dependencies": {
           "System.Buffers": "4.4.0",
@@ -212,7 +265,7 @@
           "ref/netstandard1.5/System.Runtime.dll": {}
         }
       },
-      "System.Runtime.CompilerServices.Unsafe/4.7.1": {
+      "System.Runtime.CompilerServices.Unsafe/5.0.0-preview.6.20305.6": {
         "type": "package",
         "compile": {
           "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
@@ -233,10 +286,10 @@
           "lib/netstandard1.3/System.Runtime.InteropServices.WindowsRuntime.dll": {}
         }
       },
-      "System.Threading.Tasks.Extensions/4.5.4": {
+      "System.Threading.Tasks.Extensions/4.5.3": {
         "type": "package",
         "dependencies": {
-          "System.Runtime.CompilerServices.Unsafe": "4.5.3"
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
         },
         "compile": {
           "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {}
@@ -245,10 +298,10 @@
           "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {}
         }
       },
-      "Xam.Plugins.Forms.ImageCircle/3.0.0.5": {
+      "Xam.Plugins.Forms.ImageCircle/3.1.1.1-beta": {
         "type": "package",
         "dependencies": {
-          "Xamarin.Forms": "3.0.0.446417"
+          "Xamarin.Forms": "3.4.0.1009999"
         },
         "compile": {
           "lib/netstandard2.0/ImageCircle.Forms.Plugin.dll": {}
@@ -269,7 +322,7 @@
           "lib/netstandard2.0/Xamarin.Essentials.dll": {}
         }
       },
-      "Xamarin.Forms/4.7.0.1142": {
+      "Xamarin.Forms/4.8.0.1143-pre1": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Xamarin.Forms.Core.dll": {},
@@ -286,10 +339,10 @@
           "buildTransitive/Xamarin.Forms.targets": {}
         }
       },
-      "Xamarin.Forms.Maps/4.7.0.1142": {
+      "Xamarin.Forms.Maps/4.8.0.1143-pre1": {
         "type": "package",
         "dependencies": {
-          "Xamarin.Forms": "4.7.0.1142"
+          "Xamarin.Forms": "4.8.0.1143-pre1"
         },
         "compile": {
           "lib/netstandard2.0/Xamarin.Forms.Maps.dll": {}
@@ -371,14 +424,13 @@
         "lib/netstandard2.0/GoogleMaps.LocationServices.dll"
       ]
     },
-    "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
-      "sha512": "yuvf07qFWFqtK3P/MRkEKLhn5r2UbSpVueRziSqj0yJQIKFwG1pq9mOayK3zE5qZCTs0CbrwL9M6R8VwqyGy2w==",
+    "Microsoft.Bcl.AsyncInterfaces/1.0.0": {
+      "sha512": "K63Y4hORbBcKLWH5wnKgzyn7TOfYzevIEwIedQHBIkmkEBA9SCqgvom+XTuE+fAFGvINGkhFItaZ2dvMGdT5iw==",
       "type": "package",
-      "path": "microsoft.bcl.asyncinterfaces/1.1.1",
+      "path": "microsoft.bcl.asyncinterfaces/1.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "lib/net461/Microsoft.Bcl.AsyncInterfaces.dll",
@@ -387,7 +439,7 @@
         "lib/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.xml",
         "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll",
         "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.xml",
-        "microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
+        "microsoft.bcl.asyncinterfaces.1.0.0.nupkg.sha512",
         "microsoft.bcl.asyncinterfaces.nuspec",
         "ref/net461/Microsoft.Bcl.AsyncInterfaces.dll",
         "ref/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.dll",
@@ -396,96 +448,98 @@
         "version.txt"
       ]
     },
-    "Microsoft.Extensions.Configuration.Abstractions/3.1.6": {
-      "sha512": "Z7QAA7XFvYuGZCKsfzetdIq0Vj1ngiIzCBBqerlQMhewx1ZFLXHuvKx9xAIWeZqhuQv69VmFs3vO0Af9FDAa9Q==",
+    "Microsoft.Extensions.Configuration.Abstractions/5.0.0-preview.6.20305.6": {
+      "sha512": "b41BoY4waYe8qPPsz2wipsZMFZ42elMLAz3LoUc2+Xzw/uY5+CWsPpA5G6FDSfZ1mCQy+CZoPO6u6fga28rD3g==",
       "type": "package",
-      "path": "microsoft.extensions.configuration.abstractions/3.1.6",
+      "path": "microsoft.extensions.configuration.abstractions/5.0.0-preview.6.20305.6",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
-        "lib/netcoreapp3.1/Microsoft.Extensions.Configuration.Abstractions.dll",
-        "lib/netcoreapp3.1/Microsoft.Extensions.Configuration.Abstractions.xml",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
         "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll",
         "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.xml",
-        "microsoft.extensions.configuration.abstractions.3.1.6.nupkg.sha512",
-        "microsoft.extensions.configuration.abstractions.nuspec"
+        "microsoft.extensions.configuration.abstractions.5.0.0-preview.6.20305.6.nupkg.sha512",
+        "microsoft.extensions.configuration.abstractions.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
-    "Microsoft.Extensions.DependencyInjection.Abstractions/3.1.6": {
-      "sha512": "JVlypPjlPqOEyAhET6pA7TqrK+Ya8TrYe2vvqsp62TYKS87oNuReoS7XpDFW0rrOsQo66G1yYf3K0E+lJHFHuw==",
+    "Microsoft.Extensions.DependencyInjection.Abstractions/5.0.0-preview.6.20305.6": {
+      "sha512": "pQyAlFxRMW2SNBm0NkDpr6s0hum8yFTeOzEjOfWuYd8P8abE4L3zTzJ+DcPIK/An/0rM45k8IXqfGZaGSaym8A==",
       "type": "package",
-      "path": "microsoft.extensions.dependencyinjection.abstractions/3.1.6",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/5.0.0-preview.6.20305.6",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
         "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
         "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
-        "microsoft.extensions.dependencyinjection.abstractions.3.1.6.nupkg.sha512",
-        "microsoft.extensions.dependencyinjection.abstractions.nuspec"
+        "microsoft.extensions.dependencyinjection.abstractions.5.0.0-preview.6.20305.6.nupkg.sha512",
+        "microsoft.extensions.dependencyinjection.abstractions.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
-    "Microsoft.Extensions.FileProviders.Abstractions/3.1.6": {
-      "sha512": "HjEWm0GNHeN8ykVGn2DCebBEdZYL9CVypVAysaDHfjwiRT1d8nRhYGH8ua0mheE1TIep5+86O2Ft0UcbuWyghg==",
+    "Microsoft.Extensions.FileProviders.Abstractions/5.0.0-preview.6.20305.6": {
+      "sha512": "kJySsmGVZ2wF0vaiddTFfMpZ2hq1YUo9v980wyj9iWVDUM6sz4yNyJwmXVELzNHpCc95V7R+vJ4im022kFUaDA==",
       "type": "package",
-      "path": "microsoft.extensions.fileproviders.abstractions/3.1.6",
+      "path": "microsoft.extensions.fileproviders.abstractions/5.0.0-preview.6.20305.6",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
-        "lib/netcoreapp3.1/Microsoft.Extensions.FileProviders.Abstractions.dll",
-        "lib/netcoreapp3.1/Microsoft.Extensions.FileProviders.Abstractions.xml",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
         "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Abstractions.dll",
         "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Abstractions.xml",
-        "microsoft.extensions.fileproviders.abstractions.3.1.6.nupkg.sha512",
-        "microsoft.extensions.fileproviders.abstractions.nuspec"
+        "microsoft.extensions.fileproviders.abstractions.5.0.0-preview.6.20305.6.nupkg.sha512",
+        "microsoft.extensions.fileproviders.abstractions.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
-    "Microsoft.Extensions.Hosting.Abstractions/3.1.6": {
-      "sha512": "CtXVuuBcKQXmNQm6a/wGwKkYxLNsIp7TrL8+XPld6aFUisOkkBHTm3EIm8vwKlHRI8xLONgfgILXPXREGaBBwQ==",
+    "Microsoft.Extensions.Hosting.Abstractions/5.0.0-preview.6.20305.6": {
+      "sha512": "IP0xLvtPrcKyegWmJdHeWQmTVtMzz391ZJgCpUm4rHq/jcBbHZDnYkbManIO8TDREwPoogAUAXQqtoOu2hVm/g==",
       "type": "package",
-      "path": "microsoft.extensions.hosting.abstractions/3.1.6",
+      "path": "microsoft.extensions.hosting.abstractions/5.0.0-preview.6.20305.6",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
-        "lib/netcoreapp3.1/Microsoft.Extensions.Hosting.Abstractions.dll",
-        "lib/netcoreapp3.1/Microsoft.Extensions.Hosting.Abstractions.xml",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net5.0/Microsoft.Extensions.Hosting.Abstractions.dll",
+        "lib/net5.0/Microsoft.Extensions.Hosting.Abstractions.xml",
         "lib/netstandard2.0/Microsoft.Extensions.Hosting.Abstractions.dll",
         "lib/netstandard2.0/Microsoft.Extensions.Hosting.Abstractions.xml",
-        "microsoft.extensions.hosting.abstractions.3.1.6.nupkg.sha512",
-        "microsoft.extensions.hosting.abstractions.nuspec"
+        "microsoft.extensions.hosting.abstractions.5.0.0-preview.6.20305.6.nupkg.sha512",
+        "microsoft.extensions.hosting.abstractions.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
-    "Microsoft.Extensions.Logging.Abstractions/3.1.6": {
-      "sha512": "o2XYIjF9UugupEPvFsc9N8SjevixoRznS0V6EtjUZcGV4EjXXWKUXlKKsIWmD3i4dSiGo82aNcyqfQTsF/8h8g==",
+    "Microsoft.Extensions.Primitives/5.0.0-preview.6.20305.6": {
+      "sha512": "VD9Q+u22Foigcg6iC/7ucJsjW32MhmtEAmZD+x+ImsjI7w+tcK3SUSECcqTR+R67dgG/wVnPx02FYMEOXAQcLQ==",
       "type": "package",
-      "path": "microsoft.extensions.logging.abstractions/3.1.6",
+      "path": "microsoft.extensions.primitives/5.0.0-preview.6.20305.6",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
-        "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll",
-        "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.xml",
-        "microsoft.extensions.logging.abstractions.3.1.6.nupkg.sha512",
-        "microsoft.extensions.logging.abstractions.nuspec"
-      ]
-    },
-    "Microsoft.Extensions.Primitives/3.1.6": {
-      "sha512": "X+h3tO383iMbtFxYp6Al4pgBzbfQKJY8/gd4U7+sZy90XeSfnw5SwHyCiRrAePG6kee4zCGsvQHPCqaTZ876hw==",
-      "type": "package",
-      "path": "microsoft.extensions.primitives/3.1.6",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "lib/netcoreapp3.1/Microsoft.Extensions.Primitives.dll",
-        "lib/netcoreapp3.1/Microsoft.Extensions.Primitives.xml",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netcoreapp3.0/Microsoft.Extensions.Primitives.dll",
+        "lib/netcoreapp3.0/Microsoft.Extensions.Primitives.xml",
         "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll",
         "lib/netstandard2.0/Microsoft.Extensions.Primitives.xml",
-        "microsoft.extensions.primitives.3.1.6.nupkg.sha512",
-        "microsoft.extensions.primitives.nuspec"
+        "microsoft.extensions.primitives.5.0.0-preview.6.20305.6.nupkg.sha512",
+        "microsoft.extensions.primitives.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "Microsoft.NETCore.Platforms/1.1.0": {
@@ -683,6 +737,115 @@
         "plugin.firebasestorage.nuspec"
       ]
     },
+    "Sharpnado.MaterialFrame/1.1.1": {
+      "sha512": "nUj8WipMWuc5sJcmfrPm6aIDZ7wT15V2Ev4oV1HBWRKnoc1pwAoe53zyiT0bVXnDF0dAfd++Gm0CyGhzixgxug==",
+      "type": "package",
+      "path": "sharpnado.materialframe/1.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "images/material_frame.png",
+        "lib/MonoAndroid10.0/Sharpnado.MaterialFrame.Android.dll",
+        "lib/MonoAndroid10.0/Sharpnado.MaterialFrame.Android.pdb",
+        "lib/MonoAndroid10.0/Sharpnado.MaterialFrame.dll",
+        "lib/MonoAndroid10.0/Sharpnado.MaterialFrame.pdb",
+        "lib/MonoAndroid10/Sharpnado.MaterialFrame.Android.dll",
+        "lib/MonoAndroid10/Sharpnado.MaterialFrame.Android.pdb",
+        "lib/MonoAndroid10/Sharpnado.MaterialFrame.dll",
+        "lib/MonoAndroid10/Sharpnado.MaterialFrame.pdb",
+        "lib/Xamarin.iOS10/Sharpnado.MaterialFrame.dll",
+        "lib/Xamarin.iOS10/Sharpnado.MaterialFrame.iOS.dll",
+        "lib/Xamarin.iOS10/Sharpnado.MaterialFrame.iOS.pdb",
+        "lib/Xamarin.iOS10/Sharpnado.MaterialFrame.pdb",
+        "lib/netstandard2.0/Sharpnado.MaterialFrame.dll",
+        "lib/netstandard2.0/Sharpnado.MaterialFrame.pdb",
+        "lib/uap10.0.16299/Sharpnado.MaterialFrame.UWP.dll",
+        "lib/uap10.0.16299/Sharpnado.MaterialFrame.UWP.pdb",
+        "lib/uap10.0.16299/Sharpnado.MaterialFrame.dll",
+        "lib/uap10.0.16299/Sharpnado.MaterialFrame.pdb",
+        "sharpnado.materialframe.1.1.1.nupkg.sha512",
+        "sharpnado.materialframe.nuspec"
+      ]
+    },
+    "Sharpnado.Presentation.Forms/1.7.0": {
+      "sha512": "OxLkIb6V2L0U8QKThzbTnJoILf58dtpf9fE1d3iN9ZfeMMFPgquZOw4repWm077c1bJMxHeG4DTwa6Kfbe9+9g==",
+      "type": "package",
+      "path": "sharpnado.presentation.forms/1.7.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "images/sharpnado.png",
+        "lib/MonoAndroid10.0/Sharpnado.Presentation.Forms.Droid.dll",
+        "lib/MonoAndroid10.0/Sharpnado.Presentation.Forms.Droid.pdb",
+        "lib/MonoAndroid10.0/Sharpnado.Presentation.Forms.dll",
+        "lib/MonoAndroid10.0/Sharpnado.Presentation.Forms.pdb",
+        "lib/MonoAndroid10/Sharpnado.Presentation.Forms.Droid.dll",
+        "lib/MonoAndroid10/Sharpnado.Presentation.Forms.Droid.pdb",
+        "lib/MonoAndroid10/Sharpnado.Presentation.Forms.dll",
+        "lib/MonoAndroid10/Sharpnado.Presentation.Forms.pdb",
+        "lib/Xamarin.iOS10/Sharpnado.Presentation.Forms.dll",
+        "lib/Xamarin.iOS10/Sharpnado.Presentation.Forms.iOS.dll",
+        "lib/Xamarin.iOS10/Sharpnado.Presentation.Forms.iOS.pdb",
+        "lib/Xamarin.iOS10/Sharpnado.Presentation.Forms.pdb",
+        "lib/netstandard2.0/Sharpnado.Presentation.Forms.dll",
+        "lib/netstandard2.0/Sharpnado.Presentation.Forms.pdb",
+        "sharpnado.presentation.forms.1.7.0.nupkg.sha512",
+        "sharpnado.presentation.forms.nuspec"
+      ]
+    },
+    "Sharpnado.Shadows/1.0.2": {
+      "sha512": "irtRC05SNrE7izeSBF2SgvWp9xbcUtfU1awN1Y7fe4yccw5+rK664L07iTIc1RPqyJTQDHDvZbaaWuX4PBBNhw==",
+      "type": "package",
+      "path": "sharpnado.shadows/1.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "images/shadows.png",
+        "lib/MonoAndroid10/Sharpnado.Shadows.Android.dll",
+        "lib/MonoAndroid10/Sharpnado.Shadows.Android.pdb",
+        "lib/MonoAndroid10/Sharpnado.Shadows.dll",
+        "lib/MonoAndroid10/Sharpnado.Shadows.pdb",
+        "lib/Xamarin.iOS10/Sharpnado.Shadows.dll",
+        "lib/Xamarin.iOS10/Sharpnado.Shadows.iOS.dll",
+        "lib/Xamarin.iOS10/Sharpnado.Shadows.iOS.pdb",
+        "lib/Xamarin.iOS10/Sharpnado.Shadows.pdb",
+        "lib/netstandard2.0/Sharpnado.Shadows.dll",
+        "lib/netstandard2.0/Sharpnado.Shadows.pdb",
+        "lib/uap10.0.16299/Sharpnado.Shadows.UWP.dll",
+        "lib/uap10.0.16299/Sharpnado.Shadows.UWP.pdb",
+        "lib/uap10.0.16299/Sharpnado.Shadows.dll",
+        "lib/uap10.0.16299/Sharpnado.Shadows.pdb",
+        "sharpnado.shadows.1.0.2.nupkg.sha512",
+        "sharpnado.shadows.nuspec"
+      ]
+    },
+    "Sharpnado.TaskLoaderView/2.0.0": {
+      "sha512": "iT+E4p4w2a17F9AMeVm1z83xHFbtBOig2hraryI+4xrpDckw3Y5eiD8AAx9hgvDpGwN8Tg7tI6uieqRXoVUOLQ==",
+      "type": "package",
+      "path": "sharpnado.taskloaderview/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Sharpnado.TaskLoaderView.dll",
+        "sharpnado.taskloaderview.2.0.0.nupkg.sha512",
+        "sharpnado.taskloaderview.nuspec"
+      ]
+    },
+    "Sharpnado.TaskMonitor/1.0.0": {
+      "sha512": "Yc3P4jOWrF3IVpJSfEookkGkmkbcdvyp/2WLz8dNR5b7/7iyI7tDo64HnyNJ5HVy45g8nrPaGwuauG6rHhZAZg==",
+      "type": "package",
+      "path": "sharpnado.taskmonitor/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Sharpnado.TaskMonitor.dll",
+        "sharpnado.taskmonitor.1.0.0.nupkg.sha512",
+        "sharpnado.taskmonitor.nuspec"
+      ]
+    },
     "Splat/9.5.6": {
       "sha512": "fnHiotCZUNq/ccIskm/0g9poLnUW2godyiymbTfw1Nh77OxPLsa+bsjb1g1hyhuSBuoGvnUEhLZfX9Fqc2n4cw==",
       "type": "package",
@@ -727,10 +890,10 @@
         "version.txt"
       ]
     },
-    "System.Memory/4.5.2": {
-      "sha512": "fvq1GNmUFwbKv+aLVYYdgu/+gc8Nu9oFujOxIjPrsf+meis9JBzTPDL6aP/eeGOz9yPj6rRLUbOjKMpsMEWpNg==",
+    "System.Memory/4.5.3": {
+      "sha512": "3oDzvc/zzetpTKWMShs1AADwZjQ/36HnsufHRPcOjyRAAMLDlu2iD33MBI2opxnezcVUtXyqDXXjoFMOU9c7SA==",
       "type": "package",
-      "path": "system.memory/4.5.2",
+      "path": "system.memory/4.5.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -742,7 +905,7 @@
         "lib/netstandard2.0/System.Memory.dll",
         "lib/netstandard2.0/System.Memory.xml",
         "ref/netcoreapp2.1/_._",
-        "system.memory.4.5.2.nupkg.sha512",
+        "system.memory.4.5.3.nupkg.sha512",
         "system.memory.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -913,31 +1076,31 @@
         "system.runtime.nuspec"
       ]
     },
-    "System.Runtime.CompilerServices.Unsafe/4.7.1": {
-      "sha512": "zOHkQmzPCn5zm/BH+cxC1XbUS3P4Yoi3xzW7eRgVpDR2tPGSzyMZ17Ig1iRkfJuY0nhxkQQde8pgePNiA7z7TQ==",
+    "System.Runtime.CompilerServices.Unsafe/5.0.0-preview.6.20305.6": {
+      "sha512": "syOwf2CSiendr22PkS/8CujAraBch/JgBzrsJ7U3USDBIkOE1nQEgQPieCTj6QxkgPjJn+eAHXAgwplXi/+aag==",
       "type": "package",
-      "path": "system.runtime.compilerservices.unsafe/4.7.1",
+      "path": "system.runtime.compilerservices.unsafe/5.0.0-preview.6.20305.6",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
-        "lib/net461/System.Runtime.CompilerServices.Unsafe.dll",
-        "lib/net461/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/net45/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/net45/System.Runtime.CompilerServices.Unsafe.xml",
         "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll",
         "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.xml",
         "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
         "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
         "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
         "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
-        "ref/net461/System.Runtime.CompilerServices.Unsafe.dll",
-        "ref/net461/System.Runtime.CompilerServices.Unsafe.xml",
         "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
         "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
         "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
         "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
-        "system.runtime.compilerservices.unsafe.4.7.1.nupkg.sha512",
+        "ref/netstandard2.1/System.Runtime.CompilerServices.Unsafe.dll",
+        "ref/netstandard2.1/System.Runtime.CompilerServices.Unsafe.xml",
+        "system.runtime.compilerservices.unsafe.5.0.0-preview.6.20305.6.nupkg.sha512",
         "system.runtime.compilerservices.unsafe.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -1004,10 +1167,10 @@
         "system.runtime.interopservices.windowsruntime.nuspec"
       ]
     },
-    "System.Threading.Tasks.Extensions/4.5.4": {
-      "sha512": "zteT+G8xuGu6mS+mzDzYXbzS7rd3K6Fjb9RiZlYlJPam2/hU7JCBZBVEcywNuR+oZ1ncTvc/cq0faRr3P01OVg==",
+    "System.Threading.Tasks.Extensions/4.5.3": {
+      "sha512": "+MvhNtcvIbqmhANyKu91jQnvIRVSTiaOiFNfKWwXGHG48YAb4I/TyH8spsySiPYla7gKal5ZnF3teJqZAximyQ==",
       "type": "package",
-      "path": "system.threading.tasks.extensions/4.5.4",
+      "path": "system.threading.tasks.extensions/4.5.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1015,8 +1178,6 @@
         "THIRD-PARTY-NOTICES.TXT",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
-        "lib/net461/System.Threading.Tasks.Extensions.dll",
-        "lib/net461/System.Threading.Tasks.Extensions.xml",
         "lib/netcoreapp2.1/_._",
         "lib/netstandard1.0/System.Threading.Tasks.Extensions.dll",
         "lib/netstandard1.0/System.Threading.Tasks.Extensions.xml",
@@ -1035,31 +1196,42 @@
         "ref/xamarinmac20/_._",
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._",
-        "system.threading.tasks.extensions.4.5.4.nupkg.sha512",
+        "system.threading.tasks.extensions.4.5.3.nupkg.sha512",
         "system.threading.tasks.extensions.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
     },
-    "Xam.Plugins.Forms.ImageCircle/3.0.0.5": {
-      "sha512": "59HyuAaUzuloQmu/PVCDCJQMRuuhqmIpCQ+d5hH5Qp8AZsa/vDi5ulrXDKRMZSZt/xbXsyZV+aZ/W/SZaYt2Mg==",
+    "Xam.Plugins.Forms.ImageCircle/3.1.1.1-beta": {
+      "sha512": "E/r5CJm6gV2duE25pJEOEorkAS6xBcBoJ82zbJjynnKwIUPoPofDyO2pOec4DxqZoTulRtUVw62y2PjAfGh5bQ==",
       "type": "package",
-      "path": "xam.plugins.forms.imagecircle/3.0.0.5",
+      "path": "xam.plugins.forms.imagecircle/3.1.1.1-beta",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/monoandroid71/ImageCircle.Forms.Plugin.dll",
+        "lib/monoandroid71/ImageCircle.Forms.Plugin.pdb",
         "lib/monoandroid71/ImageCircle.Forms.Plugin.xml",
-        "lib/netstandard1.0/ImageCircle.Forms.Plugin.dll",
-        "lib/netstandard1.0/ImageCircle.Forms.Plugin.xml",
+        "lib/monoandroid80/ImageCircle.Forms.Plugin.dll",
+        "lib/monoandroid80/ImageCircle.Forms.Plugin.pdb",
+        "lib/monoandroid80/ImageCircle.Forms.Plugin.xml",
+        "lib/monoandroid81/ImageCircle.Forms.Plugin.dll",
+        "lib/monoandroid81/ImageCircle.Forms.Plugin.pdb",
+        "lib/monoandroid81/ImageCircle.Forms.Plugin.xml",
         "lib/netstandard2.0/ImageCircle.Forms.Plugin.dll",
+        "lib/netstandard2.0/ImageCircle.Forms.Plugin.pdb",
         "lib/netstandard2.0/ImageCircle.Forms.Plugin.xml",
         "lib/uap10.0.16299/ImageCircle.Forms.Plugin.dll",
+        "lib/uap10.0.16299/ImageCircle.Forms.Plugin.pdb",
         "lib/uap10.0.16299/ImageCircle.Forms.Plugin.pri",
         "lib/uap10.0.16299/ImageCircle.Forms.Plugin.xml",
         "lib/xamarinios10/ImageCircle.Forms.Plugin.dll",
+        "lib/xamarinios10/ImageCircle.Forms.Plugin.pdb",
         "lib/xamarinios10/ImageCircle.Forms.Plugin.xml",
-        "xam.plugins.forms.imagecircle.3.0.0.5.nupkg.sha512",
+        "lib/xamarinmac20/ImageCircle.Forms.Plugin.dll",
+        "lib/xamarinmac20/ImageCircle.Forms.Plugin.pdb",
+        "lib/xamarinmac20/ImageCircle.Forms.Plugin.xml",
+        "xam.plugins.forms.imagecircle.3.1.1.1-beta.nupkg.sha512",
         "xam.plugins.forms.imagecircle.nuspec"
       ]
     },
@@ -1111,10 +1283,10 @@
         "xamarin.essentials.nuspec"
       ]
     },
-    "Xamarin.Forms/4.7.0.1142": {
-      "sha512": "P/o+VzmgeoFJZ2WoRiar/w0RmkR9WvwAEx6j891Bf31psPjSYjfTI8tGLczFa8LDqdv63pGQNH4hnBoxJjivzg==",
+    "Xamarin.Forms/4.8.0.1143-pre1": {
+      "sha512": "19/5NC1s+v3VVLKuUB8QQ1zykZYSEofNbz0NZQ31R4/9oeWVGbTwX3LfMg2yWE5mqPFAJKhXBftwylnZCgnDuw==",
       "type": "package",
-      "path": "xamarin.forms/4.7.0.1142",
+      "path": "xamarin.forms/4.8.0.1143-pre1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1421,14 +1593,14 @@
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.dll",
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.pdb",
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.xml",
-        "xamarin.forms.4.7.0.1142.nupkg.sha512",
+        "xamarin.forms.4.8.0.1143-pre1.nupkg.sha512",
         "xamarin.forms.nuspec"
       ]
     },
-    "Xamarin.Forms.Maps/4.7.0.1142": {
-      "sha512": "FUseIALRDBNnQVYX+VgRCdLou8mkhe81d7UoVrvUAbVmuaimPtbPb66eSnxyRmg/QXDY85oWI2CwqZaYBxZNhw==",
+    "Xamarin.Forms.Maps/4.8.0.1143-pre1": {
+      "sha512": "8RihhaDB2jVaG/aUTTibo//s4Tvuq1sXjeO2dquO1utKVGruac037xK2YeqXOtSKzl/WU57LXONBFtqRURKHDg==",
       "type": "package",
-      "path": "xamarin.forms.maps/4.7.0.1142",
+      "path": "xamarin.forms.maps/4.8.0.1143-pre1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1458,7 +1630,7 @@
         "lib/uap10.0.16299/Xamarin.Forms.Maps.UWP.dll",
         "lib/uap10.0.16299/Xamarin.Forms.Maps.UWP.pri",
         "lib/uap10.0.16299/Xamarin.Forms.Maps.dll",
-        "xamarin.forms.maps.4.7.0.1142.nupkg.sha512",
+        "xamarin.forms.maps.4.8.0.1143-pre1.nupkg.sha512",
         "xamarin.forms.maps.nuspec"
       ]
     },
@@ -1487,14 +1659,15 @@
     ".NETStandard,Version=v2.0": [
       "ChoreCore.Controllers >= 1.0.0",
       "ChoreCore.ViewModels >= 1.0.0",
-      "Microsoft.Extensions.DependencyInjection.Abstractions >= 3.1.6",
-      "Microsoft.Extensions.Hosting.Abstractions >= 3.1.6",
+      "Microsoft.Extensions.DependencyInjection.Abstractions >= 5.0.0-preview.6.20305.6",
+      "Microsoft.Extensions.Hosting.Abstractions >= 5.0.0-preview.6.20305.6",
       "NETStandard.Library >= 2.0.3",
+      "Sharpnado.Presentation.Forms >= 1.7.0",
       "Splat >= 9.5.6",
-      "Xam.Plugins.Forms.ImageCircle >= 3.0.0.5",
+      "Xam.Plugins.Forms.ImageCircle >= 3.1.1.1-beta",
       "Xamarin.Essentials >= 1.5.3.2",
-      "Xamarin.Forms >= 4.7.0.1142",
-      "Xamarin.Forms.Maps >= 4.7.0.1142"
+      "Xamarin.Forms >= 4.8.0.1143-pre1",
+      "Xamarin.Forms.Maps >= 4.8.0.1143-pre1"
     ]
   },
   "packageFolders": {
@@ -1548,11 +1721,11 @@
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection.Abstractions": {
             "target": "Package",
-            "version": "[3.1.6, )"
+            "version": "[5.0.0-preview.6.20305.6, )"
           },
           "Microsoft.Extensions.Hosting.Abstractions": {
             "target": "Package",
-            "version": "[3.1.6, )"
+            "version": "[5.0.0-preview.6.20305.6, )"
           },
           "NETStandard.Library": {
             "suppressParent": "All",
@@ -1560,13 +1733,17 @@
             "version": "[2.0.3, )",
             "autoReferenced": true
           },
+          "Sharpnado.Presentation.Forms": {
+            "target": "Package",
+            "version": "[1.7.0, )"
+          },
           "Splat": {
             "target": "Package",
             "version": "[9.5.6, )"
           },
           "Xam.Plugins.Forms.ImageCircle": {
             "target": "Package",
-            "version": "[3.0.0.5, )"
+            "version": "[3.1.1.1-beta, )"
           },
           "Xamarin.Essentials": {
             "target": "Package",
@@ -1574,11 +1751,11 @@
           },
           "Xamarin.Forms": {
             "target": "Package",
-            "version": "[4.7.0.1142, )"
+            "version": "[4.8.0.1143-pre1, )"
           },
           "Xamarin.Forms.Maps": {
             "target": "Package",
-            "version": "[4.7.0.1142, )"
+            "version": "[4.8.0.1143-pre1, )"
           }
         },
         "imports": [

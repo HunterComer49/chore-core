@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:tabs="clr-namespace:Sharpnado.Presentation.Forms.CustomViews.Tabs;assembly=Sharpnado.Presentation.Forms"
+             xmlns:materialframe="clr-namespace:Sharpnado.MaterialFrame;assembly=Sharpnado.MaterialFrame"
+             mc:Ignorable="d"
+             x:Class="ChoreCore.ProfilePage">
+    <ContentView.Content>
+        <Grid x:Name="GridContainer">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="{StaticResource ToolbarHeight}" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="0"
+                   Padding="10,0"
+                   Text="Profile"
+                   TextColor="White"
+                   VerticalTextAlignment="Center"
+                   HorizontalOptions="FillAndExpand"
+                   VerticalOptions="FillAndExpand"
+                   Style="{StaticResource TextTitleStyle}"
+                   BackgroundColor="{StaticResource Primary}" />
+
+            <tabs:TabButton Grid.Row="0"
+                            Padding="9"
+                            HorizontalOptions="End"
+                            IconImageSource="profileSettings.png"
+                            TapCommand="{Binding SettingsCommand}" />
+
+            <ScrollView Grid.Row="1">
+                <Grid RowSpacing="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="200" />
+                        <RowDefinition Height="80" />
+                        <RowDefinition Height="60" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <Image Grid.Row="0"
+                           Grid.RowSpan="2"
+                           Aspect="AspectFill"
+                           Source="{Binding ProfilePicture, Mode=OneWay}" />
+
+
+                    <materialframe:MaterialFrame Grid.Row="1"
+                                                 AndroidBlurRootElement="{Binding Source={x:Reference GridContainer}}"
+                                                 IsClippedToBounds="False"
+                                                 MaterialBlurStyle="Dark"
+                                                 MaterialTheme="AcrylicBlur" />
+                    <StackLayout Grid.Row="1"
+                                 Padding="10">
+                        <Label Style="{StaticResource TextTitleStyle}"
+                               VerticalOptions="End"
+                               TextColor="White"
+                               Text="{Binding Name}" />
+
+                        <!--<xforms:SfRating Precision="Exact"
+                                         ItemCount="5"
+                                         ItemSpacing="5"
+                                         TooltipPlacement="BottomRight"
+                                         TooltipTextColor="White"
+                                         ReadOnly="True"
+                                         Value="{Binding USer.OverallRating, Mode=OneWay}">
+                            <xforms:SfRating.RatingSettings>
+                                <xforms:SfRatingSettings RatedFill="{StaticResource Accent}"
+                                                         UnRatedFill="LightGray"
+                                                         UnRatedStroke="White" />
+                            </xforms:SfRating.RatingSettings>
+                        </xforms:SfRating>-->
+                    </StackLayout>
+
+                    <tabs:TabHostView Grid.Row="2"
+                                      BackgroundColor="{StaticResource Primary}"
+                                      Shades="{DynamicResource DynamicBottomShadow}"
+                                      SelectedIndex="{Binding Source={x:Reference Switcher}, Path=SelectedIndex, Mode=TwoWay}"
+                                      TabType="Fixed">
+                        <tabs:TabHostView.Tabs>
+                            <tabs:UnderlinedTabItem Label="My Projects"
+                                                    Style="{StaticResource TabStyle}" />
+                            <tabs:UnderlinedTabItem Label="User Info"
+                                                    Style="{StaticResource TabStyle}" />
+                        </tabs:TabHostView.Tabs>
+                    </tabs:TabHostView>
+
+                    <tabs:ViewSwitcher x:Name="Switcher"
+                                       Animate="True"
+                                       Grid.Row="3">
+
+                    </tabs:ViewSwitcher>
+                </Grid>
+            </ScrollView>
+        </Grid>
+    </ContentView.Content>
+</ContentView>

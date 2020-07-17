@@ -11,6 +11,7 @@ using Android.Net;
 using System.IO;
 using Android.Content;
 using System.Threading.Tasks;
+using Sharpnado.Presentation.Forms.Droid;
 
 namespace ChoreCore.Droid
 {
@@ -42,6 +43,7 @@ namespace ChoreCore.Droid
             Forms.Init(this, savedInstanceState);
 
             Xamarin.FormsMaps.Init(this, savedInstanceState);
+            SharpnadoInitializer.Initialize();
 
             LoadApplication(new App());
 

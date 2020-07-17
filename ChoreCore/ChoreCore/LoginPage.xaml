@@ -4,7 +4,8 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="ChoreCore.LoginPage">
+             x:Class="ChoreCore.LoginPage"
+             NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
         <StackLayout VerticalOptions="CenterAndExpand"
                      HorizontalOptions="FillAndExpand">
@@ -26,7 +27,7 @@
             </StackLayout>
 
             <Label Text="Email and/or password are incorrect. Please try again."
-                   TextColor="Red"
+                   TextColor="{StaticResource Warning}"
                    HorizontalOptions="Center"
                    IsVisible="{Binding ErrorVis, Mode=OneWay}" />
 

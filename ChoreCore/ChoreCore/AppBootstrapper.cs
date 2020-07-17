@@ -29,6 +29,7 @@ namespace ChoreCore
 
             //View Models
             Locator.CurrentMutable.Register(() => new CreateUserViewModel(), typeof(ICreateUserViewModel));
+            Locator.CurrentMutable.Register(() => new ProfileViewModel(), typeof(IProfileViewModel));
             Locator.CurrentMutable.Register(() => new ProfileSettingsViewModel(), typeof(IProfileSettingsViewModel));
             Locator.CurrentMutable.Register(() => new ForgotPasswordViewModel(), typeof(IForgotPasswordViewModel));
             Locator.CurrentMutable.Register(() => new LoginViewModel(), typeof(ILoginViewModel));

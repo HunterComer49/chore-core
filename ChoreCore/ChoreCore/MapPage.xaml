@@ -1,16 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
              mc:Ignorable="d"
-             x:Class="ChoreCore.MapPage"
-             NavigationPage.HasBackButton="False">
+             x:Class="ChoreCore.MapPage">
 
     <Grid>
-        <maps:Map x:Name="map"
-                  Grid.Row="0" />
+        <maps:Map x:Name="map" />
     </Grid>
-
-</ContentPage>
+</ContentView>

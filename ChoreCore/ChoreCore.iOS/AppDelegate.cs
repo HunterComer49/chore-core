@@ -1,6 +1,7 @@
 ﻿using ChoreCore.Controllers;
 using Foundation;
 using ImageCircle.Forms.Plugin.iOS;
+using Sharpnado.Presentation.Forms.iOS;
 using UIKit;
 using Xamarin.Forms;
 
@@ -25,9 +26,10 @@ namespace ChoreCore.iOS
 
             Forms.Init();
 
-            ImageCircleRenderer.Init();
-
             Xamarin.FormsMaps.Init();
+
+            ImageCircleRenderer.Init();
+            SharpnadoInitializer.Initialize();
 
             LoadApplication(new App());
 

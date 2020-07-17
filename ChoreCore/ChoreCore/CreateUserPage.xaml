@@ -4,7 +4,8 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="ChoreCore.CreateUserPage">
+             x:Class="ChoreCore.CreateUserPage"
+             NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
         <Grid>
             <Grid.RowDefinitions>
@@ -17,7 +18,7 @@
                    Text="Chore Core"
                    FontSize="Title"
                    TextColor="White"
-                   BackgroundColor="Black"
+                   BackgroundColor="{StaticResource Accent}"
                    HorizontalOptions="Fill"
                    HorizontalTextAlignment="Center"
                    VerticalTextAlignment="Center" />
@@ -33,7 +34,7 @@
                 <Entry Placeholder="Email"
                        Text="{Binding Email, Mode=TwoWay}" />
                 <Label Text="Invalid Email. Please try again."
-                       TextColor="Red"
+                       TextColor="{StaticResource Warning}"
                        HorizontalOptions="Center"
                        IsVisible="{Binding EmailErrorVis, Mode=OneWay}" />
 
@@ -43,14 +44,14 @@
                 <StackLayout IsVisible="{Binding PasswordIncorrectErrorVis, Mode=OneWay}"
                              HorizontalOptions="Center">
                     <Label Text="Invalid password."
-                           TextColor="Red"
+                           TextColor="{StaticResource Warning}"
                            HorizontalTextAlignment="Center" />
                     <Label Text="Minimum of 8 characters."
-                           TextColor="Red"
+                           TextColor="{StaticResource Warning}"
                            HorizontalTextAlignment="Center" />
                     <Label Text="At least 1 Uppercase, 1 Lowercase, 1 Number, 1 Special Character."
                            Margin="10,0"
-                           TextColor="Red"
+                           TextColor="{StaticResource Warning}"
                            HorizontalTextAlignment="Center" />
                 </StackLayout>
 
@@ -59,11 +60,11 @@
                        Text="{Binding ConfirmPassword, Mode=TwoWay}" />
 
                 <Label Text="Passwords to not match. Please try again."
-                       TextColor="Red"
+                       TextColor="{StaticResource Warning}"
                        HorizontalOptions="Center"
                        IsVisible="{Binding PasswordErrorVis, Mode=OneWay}" />
                 <Label Text="{Binding EmailError, Mode=OneWay}"
-                       TextColor="Red"
+                       TextColor="{StaticResource Warning}"
                        HorizontalOptions="Center"
                        IsVisible="{Binding CreateUserErrorVis, Mode=OneWay}" />
 

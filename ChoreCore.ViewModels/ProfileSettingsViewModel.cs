@@ -85,10 +85,10 @@ namespace ChoreCore.ViewModels
         {
             User = _constantUserInstance.GetUser();
 
-            Stream imageStream = _constantUserInstance.GetProfilePic();
+            byte[] imageByte = _constantUserInstance.GetProfilePic();
 
             // if stream is null, use the empty profile picture
-            ProfilePic = imageStream != null ? ImageSource.FromStream(() => imageStream) : ImageSource.FromFile("Assets/Images/emptyProfile.png");
+            ProfilePic = imageByte != null ? ByteToImage(imageByte) : ImageSource.FromFile("Assets/Images/emptyProfile.png");
         }
 
         internal async void OnChangeProfilePic()
@@ -101,9 +101,7 @@ namespace ChoreCore.ViewModels
 
                 if (string.IsNullOrEmpty(message))
                 {
-                    stream = _constantUserInstance.GetProfilePic();
-
-                    ProfilePic = ImageSource.FromStream(() => stream);
+                    ProfilePic = ByteToImage(_constantUserInstance.GetProfilePic());
                 }
             }
         }

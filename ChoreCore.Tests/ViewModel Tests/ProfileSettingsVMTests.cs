@@ -15,13 +15,13 @@ namespace ChoreCore.Tests.ViewModel_Tests
         [TestMethod]
         public void TestInitNullStream()
         {
-            Stream stream = null;
+            byte[] image = new byte[64*1024];
 
             Mock<IUserController> userControllerMock = new Mock<IUserController>(MockBehavior.Strict);
 
             Mock<IConstantUserInstance> constantUserMock = new Mock<IConstantUserInstance>(MockBehavior.Strict);
             constantUserMock.Setup(a => a.GetUser()).Returns(new User());
-            constantUserMock.Setup(a => a.GetProfilePic()).Returns(stream);
+            constantUserMock.Setup(a => a.GetProfilePic()).Returns(image);
 
             Mock<IPhotoPickerService> photoPickerMock = new Mock<IPhotoPickerService>(MockBehavior.Strict);
 
@@ -40,6 +40,7 @@ namespace ChoreCore.Tests.ViewModel_Tests
         public void TestOnChangeProfilePic()
         {
             Mock<Stream> streamMock = new Mock<Stream>(MockBehavior.Strict);
+            byte[] image = new byte[64 * 1024];
 
             Mock<IUserController> userControllerMock = new Mock<IUserController>(MockBehavior.Strict);
             userControllerMock.Setup(a => a.ChangeProfilePicture(It.IsAny<string>(), It.IsAny<Stream>()))
@@ -47,7 +48,7 @@ namespace ChoreCore.Tests.ViewModel_Tests
 
             Mock<IConstantUserInstance> constantUserMock = new Mock<IConstantUserInstance>(MockBehavior.Strict);
             constantUserMock.Setup(a => a.GetUser()).Returns(new User());
-            constantUserMock.Setup(a => a.GetProfilePic()).Returns(streamMock.Object);
+            constantUserMock.Setup(a => a.GetProfilePic()).Returns(image);
 
             Mock<IPhotoPickerService> photoPickerMock = new Mock<IPhotoPickerService>(MockBehavior.Strict);
             photoPickerMock.Setup(a => a.GetImageStreamAsync()).Returns(Task.FromResult(streamMock.Object));
@@ -68,13 +69,13 @@ namespace ChoreCore.Tests.ViewModel_Tests
         [TestMethod]
         public void TestOnCancel()
         {
-            Stream stream = null;
+            byte[] image = new byte[64 * 1024];
 
             Mock<IUserController> userControllerMock = new Mock<IUserController>(MockBehavior.Strict);
 
             Mock<IConstantUserInstance> constantUserMock = new Mock<IConstantUserInstance>(MockBehavior.Strict);
             constantUserMock.Setup(a => a.GetUser()).Returns(new User());
-            constantUserMock.Setup(a => a.GetProfilePic()).Returns(stream);
+            constantUserMock.Setup(a => a.GetProfilePic()).Returns(image);
 
             Mock<IPhotoPickerService> photoPickerMock = new Mock<IPhotoPickerService>(MockBehavior.Strict);
 
@@ -92,14 +93,14 @@ namespace ChoreCore.Tests.ViewModel_Tests
         [TestMethod]
         public void TestOnSubmitSuccess()
         {
-            Stream stream = null;
+            byte[] image = new byte[64 * 1024];
 
             Mock<IUserController> userControllerMock = new Mock<IUserController>(MockBehavior.Strict);
             userControllerMock.Setup(a => a.UpdateUser(It.IsAny<User>(), null)).Returns(Task.FromResult(""));
 
             Mock<IConstantUserInstance> constantUserMock = new Mock<IConstantUserInstance>(MockBehavior.Strict);
             constantUserMock.Setup(a => a.GetUser()).Returns(new User());
-            constantUserMock.Setup(a => a.GetProfilePic()).Returns(stream);
+            constantUserMock.Setup(a => a.GetProfilePic()).Returns(image);
 
             Mock<IPhotoPickerService> photoPickerMock = new Mock<IPhotoPickerService>(MockBehavior.Strict);
 
@@ -119,14 +120,14 @@ namespace ChoreCore.Tests.ViewModel_Tests
         [TestMethod]
         public void TestOnSubmitFail()
         {
-            Stream stream = null;
+            byte[] image = new byte[64 * 1024];
 
             Mock<IUserController> userControllerMock = new Mock<IUserController>(MockBehavior.Strict);
             userControllerMock.Setup(a => a.UpdateUser(It.IsAny<User>(), null)).Returns(Task.FromResult("ERROR"));
 
             Mock<IConstantUserInstance> constantUserMock = new Mock<IConstantUserInstance>(MockBehavior.Strict);
             constantUserMock.Setup(a => a.GetUser()).Returns(new User());
-            constantUserMock.Setup(a => a.GetProfilePic()).Returns(stream);
+            constantUserMock.Setup(a => a.GetProfilePic()).Returns(image);
 
             Mock<IPhotoPickerService> photoPickerMock = new Mock<IPhotoPickerService>(MockBehavior.Strict);
 

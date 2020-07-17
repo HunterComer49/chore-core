@@ -3,9 +3,103 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:tabs="clr-namespace:Sharpnado.Presentation.Forms.CustomViews.Tabs;assembly=Sharpnado.Presentation.Forms"
              mc:Ignorable="d"
              x:Class="ChoreCore.App">
     <Application.Resources>
- 
+        <ResourceDictionary>
+            <OnPlatform x:Key="ToolbarHeight"
+                        x:TypeArguments="GridLength">
+                <On Platform="iOS">80</On>
+                <On Platform="Android">60</On>
+            </OnPlatform>
+
+            <Color x:Key="Primary">#0A0B1F</Color>
+            <Color x:Key="Accent">#3D6AB8</Color>
+            <Color x:Key="Warning">#993342</Color>
+
+            <x:Double x:Key="TextSizeHeadline">20</x:Double>
+            <x:Double x:Key="TextSizeTitle">18</x:Double>
+            <x:Double x:Key="TextSizeSubhead">16</x:Double>
+            <x:Double x:Key="TextSizeBody">14</x:Double>
+            <x:Double x:Key="TextSizeCaption">12</x:Double>
+            <x:Double x:Key="TextSizeSmallCaption">11</x:Double>
+
+            <OnPlatform x:Key="FontBold"
+                        x:TypeArguments="x:String">
+                <On Platform="iOS">OpenSans-Bold</On>
+                <On Platform="Android">OpenSans-Bold.ttf#Open Sans</On>
+            </OnPlatform>
+            <OnPlatform x:Key="FontExtraBold"
+                        x:TypeArguments="x:String">
+                <On Platform="iOS">OpenSans-ExtraBold</On>
+                <On Platform="Android">OpenSans-ExtraBold.ttf#Open Sans</On>
+            </OnPlatform>
+            <OnPlatform x:Key="FontRegular"
+                        x:TypeArguments="x:String">
+                <On Platform="iOS">OpenSans-Regular</On>
+                <On Platform="Android">OpenSans-Regular.ttf#Open Sans</On>
+            </OnPlatform>
+
+            <Style x:Key="TextBody"
+                   TargetType="Label">
+                <Setter Property="FontFamily"
+                        Value="{StaticResource FontRegular}" />
+                <Setter Property="TextColor"
+                        Value="{DynamicResource DynamicPrimaryTextColor}" />
+                <Setter Property="FontSize"
+                        Value="{StaticResource TextSizeBody}" />
+            </Style>
+
+            <Style x:Key="TextHeadline"
+                   TargetType="Label">
+                <Setter Property="FontFamily"
+                        Value="{StaticResource FontExtraBold}" />
+                <Setter Property="TextColor"
+                        Value="{DynamicResource DynamicPrimaryTextColor}" />
+                <Setter Property="FontSize"
+                        Value="{StaticResource TextSizeHeadline}" />
+            </Style>
+
+            <Style x:Key="TextTitleStyle"
+                   TargetType="Label">
+                <Setter Property="FontFamily"
+                        Value="{StaticResource FontBold}" />
+                <Setter Property="TextColor"
+                        Value="{DynamicResource DynamicPrimaryTextColor}" />
+                <Setter Property="FontSize"
+                        Value="{StaticResource TextSizeTitle}" />
+            </Style>
+
+            <Style x:Key="TabStyle"
+                   TargetType="tabs:UnderlinedTabItem">
+                <Setter Property="SelectedTabColor"
+                        Value="{StaticResource Primary}" />
+                <Setter Property="FontFamily"
+                        Value="{StaticResource FontBold}" />
+                <Setter Property="LabelSize"
+                        Value="14" />
+                <Setter Property="BackgroundColor"
+                        Value="{StaticResource Accent}" />
+                <Setter Property="UnselectedLabelColor"
+                        Value="White" />
+            </Style>
+
+            <Style x:Key="BottomTabStyle"
+                   TargetType="tabs:BottomTabItem">
+                <Setter Property="SelectedTabColor"
+                        Value="{StaticResource Accent}" />
+                <Setter Property="UnselectedLabelColor"
+                        Value="Gray" />
+                <Setter Property="UnselectedIconColor"
+                        Value="LightGray" />
+                <Setter Property="FontFamily"
+                        Value="{StaticResource FontRegular}" />
+                <Setter Property="LabelSize"
+                        Value="14" />
+                <Setter Property="IconSize"
+                        Value="28" />
+            </Style>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

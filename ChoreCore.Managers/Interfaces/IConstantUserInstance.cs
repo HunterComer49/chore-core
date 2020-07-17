@@ -5,7 +5,7 @@ namespace ChoreCore.Managers
 {
     public interface IConstantUserInstance
     {
-        Stream GetProfilePic();
+        byte[] GetProfilePic();
         User GetUser();
         void SetProfilePic(Stream stream);
         void SetUser(User user);

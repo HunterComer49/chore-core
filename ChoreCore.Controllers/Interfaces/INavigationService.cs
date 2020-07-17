@@ -9,5 +9,6 @@ namespace ChoreCore.Controllers
         Task NavigateToCreateUser();
         Task NavigateToHomePage(int index = 0);
         Task NavigateToNewUserInfo();
+        Task NavigateToProfileSettings();
     }
 }
