@@ -322,7 +322,7 @@
           "lib/netstandard2.0/Xamarin.Essentials.dll": {}
         }
       },
-      "Xamarin.Forms/4.8.0.1143-pre1": {
+      "Xamarin.Forms/4.7.0.1142": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Xamarin.Forms.Core.dll": {},
@@ -339,10 +339,10 @@
           "buildTransitive/Xamarin.Forms.targets": {}
         }
       },
-      "Xamarin.Forms.Maps/4.8.0.1143-pre1": {
+      "Xamarin.Forms.Maps/4.7.0.1142": {
         "type": "package",
         "dependencies": {
-          "Xamarin.Forms": "4.8.0.1143-pre1"
+          "Xamarin.Forms": "4.7.0.1142"
         },
         "compile": {
           "lib/netstandard2.0/Xamarin.Forms.Maps.dll": {}
@@ -1283,10 +1283,10 @@
         "xamarin.essentials.nuspec"
       ]
     },
-    "Xamarin.Forms/4.8.0.1143-pre1": {
-      "sha512": "19/5NC1s+v3VVLKuUB8QQ1zykZYSEofNbz0NZQ31R4/9oeWVGbTwX3LfMg2yWE5mqPFAJKhXBftwylnZCgnDuw==",
+    "Xamarin.Forms/4.7.0.1142": {
+      "sha512": "P/o+VzmgeoFJZ2WoRiar/w0RmkR9WvwAEx6j891Bf31psPjSYjfTI8tGLczFa8LDqdv63pGQNH4hnBoxJjivzg==",
       "type": "package",
-      "path": "xamarin.forms/4.8.0.1143-pre1",
+      "path": "xamarin.forms/4.7.0.1142",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1593,14 +1593,14 @@
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.dll",
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.pdb",
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.xml",
-        "xamarin.forms.4.8.0.1143-pre1.nupkg.sha512",
+        "xamarin.forms.4.7.0.1142.nupkg.sha512",
         "xamarin.forms.nuspec"
       ]
     },
-    "Xamarin.Forms.Maps/4.8.0.1143-pre1": {
-      "sha512": "8RihhaDB2jVaG/aUTTibo//s4Tvuq1sXjeO2dquO1utKVGruac037xK2YeqXOtSKzl/WU57LXONBFtqRURKHDg==",
+    "Xamarin.Forms.Maps/4.7.0.1142": {
+      "sha512": "FUseIALRDBNnQVYX+VgRCdLou8mkhe81d7UoVrvUAbVmuaimPtbPb66eSnxyRmg/QXDY85oWI2CwqZaYBxZNhw==",
       "type": "package",
-      "path": "xamarin.forms.maps/4.8.0.1143-pre1",
+      "path": "xamarin.forms.maps/4.7.0.1142",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1630,7 +1630,7 @@
         "lib/uap10.0.16299/Xamarin.Forms.Maps.UWP.dll",
         "lib/uap10.0.16299/Xamarin.Forms.Maps.UWP.pri",
         "lib/uap10.0.16299/Xamarin.Forms.Maps.dll",
-        "xamarin.forms.maps.4.8.0.1143-pre1.nupkg.sha512",
+        "xamarin.forms.maps.4.7.0.1142.nupkg.sha512",
         "xamarin.forms.maps.nuspec"
       ]
     },
@@ -1666,8 +1666,8 @@
       "Splat >= 9.5.6",
       "Xam.Plugins.Forms.ImageCircle >= 3.1.1.1-beta",
       "Xamarin.Essentials >= 1.5.3.2",
-      "Xamarin.Forms >= 4.8.0.1143-pre1",
-      "Xamarin.Forms.Maps >= 4.8.0.1143-pre1"
+      "Xamarin.Forms >= 4.7.0.1142",
+      "Xamarin.Forms.Maps >= 4.7.0.1142"
     ]
   },
   "packageFolders": {
@@ -1751,11 +1751,11 @@
           },
           "Xamarin.Forms": {
             "target": "Package",
-            "version": "[4.8.0.1143-pre1, )"
+            "version": "[4.7.0.1142, )"
           },
           "Xamarin.Forms.Maps": {
             "target": "Package",
-            "version": "[4.8.0.1143-pre1, )"
+            "version": "[4.7.0.1142, )"
           }
         },
         "imports": [

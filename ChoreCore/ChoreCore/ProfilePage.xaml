@@ -5,6 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:tabs="clr-namespace:Sharpnado.Presentation.Forms.CustomViews.Tabs;assembly=Sharpnado.Presentation.Forms"
              xmlns:materialframe="clr-namespace:Sharpnado.MaterialFrame;assembly=Sharpnado.MaterialFrame"
+             xmlns:customviews="clr-namespace:ChoreCore.CustomViews"
              mc:Ignorable="d"
              x:Class="ChoreCore.ProfilePage">
     <ContentView.Content>
@@ -51,25 +52,28 @@
                                                  MaterialBlurStyle="Dark"
                                                  MaterialTheme="AcrylicBlur" />
                     <StackLayout Grid.Row="1"
-                                 Padding="10">
+                                 Padding="10"
+                                 Orientation="Vertical">
                         <Label Style="{StaticResource TextTitleStyle}"
                                VerticalOptions="End"
                                TextColor="White"
                                Text="{Binding Name}" />
 
-                        <!--<xforms:SfRating Precision="Exact"
-                                         ItemCount="5"
-                                         ItemSpacing="5"
-                                         TooltipPlacement="BottomRight"
-                                         TooltipTextColor="White"
-                                         ReadOnly="True"
-                                         Value="{Binding USer.OverallRating, Mode=OneWay}">
-                            <xforms:SfRating.RatingSettings>
-                                <xforms:SfRatingSettings RatedFill="{StaticResource Accent}"
-                                                         UnRatedFill="LightGray"
-                                                         UnRatedStroke="White" />
-                            </xforms:SfRating.RatingSettings>
-                        </xforms:SfRating>-->
+                        <StackLayout Orientation="Horizontal">
+                            <customviews:RatingStars Precision="Half"
+                                                     WidthRequest="130"
+                                                     ImageEmptyStar="rating_empty.png"
+                                                     ImageFullStar="rating_full.png"
+                                                     ImageHalfStar="rating_half.png"
+                                                     Rating="{Binding User.OverallRating, Mode=OneWay}" />
+                            <Label Text="(" 
+                                   TextColor="White"/>
+                            <Label Text="{Binding User.OverallRating, Mode=TwoWay}"
+                                   TextColor="White"
+                                   FontSize="Small"/>
+                            <Label Text="/ 5 )"
+                                   TextColor="White" />
+                        </StackLayout>
                     </StackLayout>
 
                     <tabs:TabHostView Grid.Row="2"

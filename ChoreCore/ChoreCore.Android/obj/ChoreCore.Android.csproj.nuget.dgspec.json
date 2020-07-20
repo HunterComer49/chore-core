@@ -329,17 +329,13 @@
             },
             "Xamarin.Firebase.Auth": {
               "target": "Package",
-              "version": "[71.1605.1, )"
+              "version": "[71.1605.4, )"
             },
             "Xamarin.Firebase.Core": {
               "target": "Package",
-              "version": "[71.1601.1, )"
+              "version": "[71.1601.4, )"
             },
             "Xamarin.Forms": {
-              "target": "Package",
-              "version": "[4.7.0.1142, )"
-            },
-            "Xamarin.Forms.Maps": {
               "target": "Package",
               "version": "[4.7.0.1142, )"
             }
@@ -424,11 +420,11 @@
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[4.8.0.1143-pre1, )"
+              "version": "[4.7.0.1142, )"
             },
             "Xamarin.Forms.Maps": {
               "target": "Package",
-              "version": "[4.8.0.1143-pre1, )"
+              "version": "[4.7.0.1142, )"
             }
           },
           "imports": [

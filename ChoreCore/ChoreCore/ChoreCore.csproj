@@ -22,6 +22,9 @@
     <None Remove="Assets\Images\map.png" />
     <None Remove="Assets\Images\profile.png" />
     <None Remove="Assets\Images\profileSettings.png" />
+    <None Remove="Assets\Images\rating_empty.png" />
+    <None Remove="Assets\Images\rating_full.png" />
+    <None Remove="Assets\Images\rating_half.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -34,6 +37,9 @@
     <EmbeddedResource Include="Assets\Images\map.png" />
     <EmbeddedResource Include="Assets\Images\profile.png" />
     <EmbeddedResource Include="Assets\Images\profileSettings.png" />
+    <EmbeddedResource Include="Assets\Images\rating_empty.png" />
+    <EmbeddedResource Include="Assets\Images\rating_full.png" />
+    <EmbeddedResource Include="Assets\Images\rating_half.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -42,9 +48,9 @@
     <PackageReference Include="Sharpnado.Presentation.Forms" Version="1.7.0" />
     <PackageReference Include="Splat" Version="9.5.6" />
     <PackageReference Include="Xam.Plugins.Forms.ImageCircle" Version="3.1.1.1-beta" />
-    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1143-pre1" />
+    <PackageReference Include="Xamarin.Forms" Version="4.7.0.1142" />
     <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
-    <PackageReference Include="Xamarin.Forms.Maps" Version="4.8.0.1143-pre1" />
+    <PackageReference Include="Xamarin.Forms.Maps" Version="4.7.0.1142" />
   </ItemGroup>
 
   <ItemGroup>

@@ -11799,10 +11799,19 @@ namespace ChoreCore.Droid
 			public const int profileSettings = 2131165320;
 			
 			// aapt resource value: 0x7F070089
-			public const int tooltip_frame_dark = 2131165321;
+			public const int rating_empty = 2131165321;
 			
 			// aapt resource value: 0x7F07008A
-			public const int tooltip_frame_light = 2131165322;
+			public const int rating_full = 2131165322;
+			
+			// aapt resource value: 0x7F07008B
+			public const int rating_half = 2131165323;
+			
+			// aapt resource value: 0x7F07008C
+			public const int tooltip_frame_dark = 2131165324;
+			
+			// aapt resource value: 0x7F07008D
+			public const int tooltip_frame_light = 2131165325;
 			
 			static Drawable()
 			{

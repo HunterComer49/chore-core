@@ -512,8 +512,8 @@
           "Splat": "9.5.6",
           "Xam.Plugins.Forms.ImageCircle": "3.1.1.1-beta",
           "Xamarin.Essentials": "1.5.3.2",
-          "Xamarin.Forms": "4.8.0.1143-pre1",
-          "Xamarin.Forms.Maps": "4.8.0.1143-pre1"
+          "Xamarin.Forms": "4.7.0.1142",
+          "Xamarin.Forms.Maps": "4.7.0.1142"
         },
         "compile": {
           "bin/placeholder/com.companyname.chorecore.dll": {}
@@ -1034,8 +1034,8 @@
           "Splat": "9.5.6",
           "Xam.Plugins.Forms.ImageCircle": "3.1.1.1-beta",
           "Xamarin.Essentials": "1.5.3.2",
-          "Xamarin.Forms": "4.8.0.1143-pre1",
-          "Xamarin.Forms.Maps": "4.8.0.1143-pre1"
+          "Xamarin.Forms": "4.7.0.1142",
+          "Xamarin.Forms.Maps": "4.7.0.1142"
         },
         "compile": {
           "bin/placeholder/com.companyname.chorecore.dll": {}
@@ -1556,8 +1556,8 @@
           "Splat": "9.5.6",
           "Xam.Plugins.Forms.ImageCircle": "3.1.1.1-beta",
           "Xamarin.Essentials": "1.5.3.2",
-          "Xamarin.Forms": "4.8.0.1143-pre1",
-          "Xamarin.Forms.Maps": "4.8.0.1143-pre1"
+          "Xamarin.Forms": "4.7.0.1142",
+          "Xamarin.Forms.Maps": "4.7.0.1142"
         },
         "compile": {
           "bin/placeholder/com.companyname.chorecore.dll": {}
@@ -2078,8 +2078,8 @@
           "Splat": "9.5.6",
           "Xam.Plugins.Forms.ImageCircle": "3.1.1.1-beta",
           "Xamarin.Essentials": "1.5.3.2",
-          "Xamarin.Forms": "4.8.0.1143-pre1",
-          "Xamarin.Forms.Maps": "4.8.0.1143-pre1"
+          "Xamarin.Forms": "4.7.0.1142",
+          "Xamarin.Forms.Maps": "4.7.0.1142"
         },
         "compile": {
           "bin/placeholder/com.companyname.chorecore.dll": {}
@@ -3074,7 +3074,6 @@
       "Xamarin.Essentials >= 1.5.3.2",
       "Xamarin.Firebase.iOS.Auth >= 6.5.1",
       "Xamarin.Forms >= 4.7.0.1142",
-      "Xamarin.Forms.Maps >= 4.7.0.1142",
       "com.companyname.chorecore >= 1.0.0"
     ]
   },
@@ -3137,10 +3136,6 @@
           "Xamarin.Forms": {
             "target": "Package",
             "version": "[4.7.0.1142, )"
-          },
-          "Xamarin.Forms.Maps": {
-            "target": "Package",
-            "version": "[4.7.0.1142, )"
           }
         }
       }
@@ -3156,33 +3151,5 @@
         "#import": []
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1605",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Detected package downgrade: Xamarin.Forms.Maps from 4.8.0.1143-pre1 to 4.7.0.1142. Reference the package directly from the project to select a different version. \r\n ChoreCore.iOS -> com.companyname.chorecore -> Xamarin.Forms.Maps (>= 4.8.0.1143-pre1) \r\n ChoreCore.iOS -> Xamarin.Forms.Maps (>= 4.7.0.1142)",
-      "libraryId": "Xamarin.Forms.Maps",
-      "targetGraphs": [
-        "Xamarin.iOS,Version=v1.0",
-        "Xamarin.iOS,Version=v1.0/win",
-        "Xamarin.iOS,Version=v1.0/win-x64",
-        "Xamarin.iOS,Version=v1.0/win-x86"
-      ]
-    },
-    {
-      "code": "NU1605",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Detected package downgrade: Xamarin.Forms from 4.8.0.1143-pre1 to 4.7.0.1142. Reference the package directly from the project to select a different version. \r\n ChoreCore.iOS -> com.companyname.chorecore -> Xamarin.Forms (>= 4.8.0.1143-pre1) \r\n ChoreCore.iOS -> Xamarin.Forms (>= 4.7.0.1142)",
-      "libraryId": "Xamarin.Forms",
-      "targetGraphs": [
-        "Xamarin.iOS,Version=v1.0",
-        "Xamarin.iOS,Version=v1.0/win",
-        "Xamarin.iOS,Version=v1.0/win-x64",
-        "Xamarin.iOS,Version=v1.0/win-x86"
-      ]
-    }
-  ]
+  }
 }
