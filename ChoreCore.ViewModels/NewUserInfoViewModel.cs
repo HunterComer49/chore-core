@@ -33,26 +33,12 @@ namespace ChoreCore.ViewModels
         public User User
         {
             get { return _user; }
-            set
-            {
-                if (_user != value)
-                {
-                    _user = value;
-                    OnPropertyChanged();
-                }
-            }
+            set { SetAndRaise(ref _user, value); }
         }
         public string ErrorMessage
         {
             get { return _errorMessage; }
-            set
-            {
-                if (_errorMessage != value)
-                {
-                    _errorMessage = value;
-                    OnPropertyChanged();
-                }
-            }
+            set { SetAndRaise(ref _errorMessage, value); }
         }
         public List<string> States => new List<string>(Enum.GetNames(typeof(States)));
         #endregion
@@ -74,9 +60,9 @@ namespace ChoreCore.ViewModels
         {
             //Do not call database if they didn't actually fill any of the values out
             if (string.IsNullOrEmpty(User.FirstName) && string.IsNullOrEmpty(User.LastName)
-                && string.IsNullOrEmpty(User.PhoneNumber) && string.IsNullOrEmpty(User.Street)
-                && string.IsNullOrEmpty(User.City) && string.IsNullOrEmpty(User.State)
-                && string.IsNullOrEmpty(_user.Zip))
+                && string.IsNullOrEmpty(User.PhoneNumber) && string.IsNullOrEmpty(User.Address.Street)
+                && string.IsNullOrEmpty(User.Address.City) && string.IsNullOrEmpty(User.Address.State)
+                && string.IsNullOrEmpty(User.Address.Zip))
             {
                 await _navigation.NavigateToHomePage();
                 return;

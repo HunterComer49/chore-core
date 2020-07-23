@@ -27,26 +27,12 @@ namespace ChoreCore.ViewModels
         public string Email
         {
             get { return _email; }
-            set
-            {
-                if (_email != value)
-                {
-                    _email = value;
-                    OnPropertyChanged();
-                }
-            }
+            set { SetAndRaise(ref _email, value); }
         }
         public bool ErrorVis
         {
             get { return _errorVis; }
-            set
-            {
-                if (_errorVis != value)
-                {
-                    _errorVis = value;
-                    OnPropertyChanged();
-                }
-            }
+            set { SetAndRaise(ref _errorVis, value); }
         }
         #endregion
 

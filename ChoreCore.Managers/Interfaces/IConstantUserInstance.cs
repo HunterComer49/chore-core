@@ -7,7 +7,7 @@ namespace ChoreCore.Managers
     {
         byte[] GetProfilePic();
         User GetUser();
-        void SetProfilePic(Stream stream);
+        void SetProfilePic(byte[] image);
         void SetUser(User user);
     }
 }

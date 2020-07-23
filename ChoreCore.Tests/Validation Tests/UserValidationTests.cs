@@ -11,9 +11,9 @@ namespace ChoreCore.Tests.Validation_Tests
     {
         public UserValidation GetUserValidation()
         {
-            Mock<IGeopointManager> geopointManagerMock = new Mock<IGeopointManager>(MockBehavior.Strict);
+            Mock<IAddressValidation> addressValidationMock = new Mock<IAddressValidation>(MockBehavior.Strict);
 
-            return new UserValidation(geopointManagerMock.Object);
+            return new UserValidation(addressValidationMock.Object);
         }
 
         [DataRow("huntcomer49@gmail.com", true)]
@@ -67,50 +67,6 @@ namespace ChoreCore.Tests.Validation_Tests
             }
         }
 
-        [DataRow("NE", true)]
-        [DataRow("WXY", false)]
-        [DataTestMethod]
-        public void TestValidateState(string state, bool pass)
-        {
-            UserValidation userValidation = GetUserValidation();
-
-            User user = new User()
-            {
-                State = state
-            };
-
-            if (pass)
-            {
-                Valid(user, userValidation.ValidateState);
-            }
-            else
-            {
-                Invalid(user, userValidation.ValidateState);
-            }
-        }
-
-        [DataRow("12345", true)]
-        [DataRow("abc", false)]
-        [DataTestMethod]
-        public void TestValidateZipCode(string zip, bool pass)
-        {
-            UserValidation userValidation = GetUserValidation();
-
-            User user = new User()
-            {
-                Zip = zip
-            };
-
-            if (pass)
-            {
-                Valid(user, userValidation.ValidateZipCode);
-            }
-            else
-            {
-                Invalid(user, userValidation.ValidateZipCode);
-            }
-        }
-
         private void Valid(User user, Action<User> methodName)
         {
             try
@@ -128,8 +84,6 @@ namespace ChoreCore.Tests.Validation_Tests
 
         private void Invalid(User user, Action<User> methodName)
         {
-            UserValidation userValidation = GetUserValidation();
-
             try
             {
                 methodName(user);

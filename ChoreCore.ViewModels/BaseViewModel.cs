@@ -15,6 +15,19 @@ namespace ChoreCore.ViewModels
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
+        protected bool SetAndRaise<T>(ref T property, T value, [CallerMemberName] string propertyName = null)
+        {
+            if (Equals(property, value))
+            {
+                return false;
+            }
+
+            property = value;
+            OnPropertyChanged(propertyName);
+
+            return true;
+        }
+
         protected ImageSource ByteToImage(byte[] image)
         {
             return ImageSource.FromStream(() => new MemoryStream(image.ToArray()));

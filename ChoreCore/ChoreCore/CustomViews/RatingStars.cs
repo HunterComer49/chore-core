@@ -15,10 +15,7 @@ namespace ChoreCore.CustomViews
 
             for (int i = 0; i < 5; i++)
             {
-                StarImages.Add(new Image()
-                {
-                    WidthRequest = grid.WidthRequest / 5
-                });
+                StarImages.Add(new Image());
 
                 //Add image
                 grid.Children.Add(StarImages[i], i, 0);
@@ -61,6 +58,18 @@ namespace ChoreCore.CustomViews
             set { SetValue(ImageHalfStarProperty, value); }
         }
 
+        public double StarWidth
+        {
+            get { return (double)GetValue(StarWidthProperty); }
+            set { SetValue(StarWidthProperty, value); }
+        }
+
+        public double StarHeight
+        {
+            get { return (double)GetValue(StarHeightProperty); }
+            set { SetValue(StarHeightProperty, value); }
+        }
+
         public static readonly BindableProperty RatingProperty =
             BindableProperty.Create(propertyName: nameof(Rating),
               returnType: typeof(double),
@@ -97,6 +106,19 @@ namespace ChoreCore.CustomViews
               defaultValue: ImageSource.FromResource("rating_half.png"),
               propertyChanged: UpdateStarsDisplay);
 
+        public static readonly BindableProperty StarWidthProperty =
+          BindableProperty.Create(propertyName: nameof(StarWidth),
+              returnType: typeof(double),
+              declaringType: typeof(RatingStars),
+              defaultValue: 0.0,
+              propertyChanged: UpdateStarsDisplay);
+
+        public static readonly BindableProperty StarHeightProperty =
+          BindableProperty.Create(propertyName: nameof(StarHeight),
+              returnType: typeof(double),
+              declaringType: typeof(RatingStars),
+              defaultValue: 0.0,
+              propertyChanged: UpdateStarsDisplay);
 
         private static void OnPrecisionPropertyChanged(BindableObject bindable, object oldValue, object newValue)
         {
@@ -118,6 +140,8 @@ namespace ChoreCore.CustomViews
             for (int i = 0; i < StarImages.Count; i++)
             {
                 StarImages[i].Source = GetStarSource(i, value);
+                StarImages[i].WidthRequest = StarWidth;
+                StarImages[i].HeightRequest = StarHeight;
 
                 value--;
             }

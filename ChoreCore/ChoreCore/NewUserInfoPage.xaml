@@ -42,10 +42,10 @@
                        Text="{Binding User.PhoneNumber, Mode=TwoWay}" />
 
                 <Entry Placeholder="Street"
-                       Text="{Binding User.Street, Mode=TwoWay}" />
+                       Text="{Binding User.Address.Street, Mode=TwoWay}" />
 
                 <Entry Placeholder="City"
-                       Text="{Binding User.City, Mode=TwoWay}" />
+                       Text="{Binding User.Address.City, Mode=TwoWay}" />
 
                 <Grid>
                     <Grid.ColumnDefinitions>
@@ -56,11 +56,11 @@
                     <Picker Grid.Column="0"
                             Title="State"
                             ItemsSource="{Binding States, Mode=OneWay}"
-                            SelectedItem="{Binding User.State, Mode=TwoWay}" />
+                            SelectedItem="{Binding User.Address.State, Mode=TwoWay}" />
 
                     <Entry Grid.Column="2"
                            Placeholder="Zip Code"
-                           Text="{Binding User.Zip, Mode=TwoWay}" />
+                           Text="{Binding User.Address.Zip, Mode=TwoWay}" />
                 </Grid>
 
                 <Grid>

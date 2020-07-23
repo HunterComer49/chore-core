@@ -30,6 +30,7 @@ namespace ChoreCore.iOS
 
             ImageCircleRenderer.Init();
             SharpnadoInitializer.Initialize();
+            Sharpnado.Shades.iOS.iOSShadowsRenderer.Initialize();
 
             LoadApplication(new App());
 

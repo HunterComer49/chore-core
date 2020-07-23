@@ -43,7 +43,9 @@
 	<string>Can we use your location at all times?</string>
 
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Picture Picker uses photo library</string>
+	<string>Can we access your photo library?</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Can we use your camera?</string>
 
 	<key>UIAppFonts</key>
 	<array>

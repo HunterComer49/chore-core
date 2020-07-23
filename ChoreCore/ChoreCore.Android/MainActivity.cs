@@ -12,6 +12,7 @@ using System.IO;
 using Android.Content;
 using System.Threading.Tasks;
 using Sharpnado.Presentation.Forms.Droid;
+using Sharpnado.Shades;
 
 namespace ChoreCore.Droid
 {

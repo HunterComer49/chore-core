@@ -41,38 +41,17 @@ namespace ChoreCore.ViewModels
         public User User
         {
             get { return _user; }
-            set
-            {
-                if (_user != value)
-                {
-                    _user = value;
-                    OnPropertyChanged();
-                }
-            }
+            set { SetAndRaise(ref _user, value); }
         }
         public ImageSource ProfilePic
         {
             get { return _profilePic; }
-            set
-            {
-                if (_profilePic != value)
-                {
-                    _profilePic = value;
-                    OnPropertyChanged();
-                }
-            }
+            set { SetAndRaise(ref _profilePic, value); }
         }
         public string ErrorMessage
         {
             get { return _errorMessage; }
-            set
-            {
-                if (_errorMessage != value)
-                {
-                    _errorMessage = value;
-                    OnPropertyChanged();
-                }
-            }
+            set { SetAndRaise(ref _errorMessage, value); }
         }
         public List<string> States => new List<string>(Enum.GetNames(typeof(States)));
         #endregion

@@ -26,13 +26,7 @@ namespace ChoreCore.Models
 
         public GeoPoint GeoPoint { get; set; }
 
-        public string Street { get; set; }
-
-        public string City { get; set; }
-
-        public string State { get; set; } 
-
-        public string Zip { get; set; }
+        public Address Address { get; set; } = new Address();
 
         public double OverallRating { get; set; }
     }

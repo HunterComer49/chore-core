@@ -10,5 +10,11 @@
 
         public static readonly int ProfileIndex = 1;
 
+
+        // Profile Tabbed page indexes
+        public static readonly int ProfilePastProjectsIndex = 0;
+
+        public static readonly int ProfileInfoIndex = 1;
+
     }
 }

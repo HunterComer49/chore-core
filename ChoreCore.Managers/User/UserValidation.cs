@@ -1,6 +1,4 @@
 ﻿using ChoreCore.Models;
-using GoogleMaps.LocationServices;
-using Plugin.CloudFirestore;
 using System;
 using System.Runtime.CompilerServices;
 using System.Text.RegularExpressions;
@@ -10,11 +8,11 @@ namespace ChoreCore.Managers
 {
     public class UserValidation : IUserValidation
     {
-        private IGeopointManager _geopointManager;
+        private IAddressValidation _addressValidation;
 
-        public UserValidation(IGeopointManager geopointManager = null)
+        public UserValidation(IAddressValidation addressValidation = null)
         {
-            _geopointManager = geopointManager ?? (IGeopointManager)Splat.Locator.Current.GetService(typeof(IGeopointManager));
+            _addressValidation = addressValidation ?? (IAddressValidation)Splat.Locator.Current.GetService(typeof(IAddressValidation));
         }
 
         public string ValidateUser(User user)
@@ -23,28 +21,16 @@ namespace ChoreCore.Managers
             {
                 ValidateEmail(user);
                 ValidatePhoneNumber(user);
-                ValidateState(user);
-                ValidateZipCode(user);
+                _addressValidation.ValidateAddress(user.Address);
 
+                user.GeoPoint = _addressValidation.GetGeopoint(user.Address);
+                
                 return string.Empty;
             }
             catch (Exception e)
             {
                 return e.Message;
             }
-        }
-
-        public User SetGeopoint(User user)
-        {
-            if (!string.IsNullOrEmpty(user.Street) && !string.IsNullOrEmpty(user.City)
-                && !string.IsNullOrEmpty(user.State) && !string.IsNullOrEmpty(user.Zip))
-            {
-                string address = $"{user.Street} {user.City}, {user.State} {user.Zip}";
-                MapPoint geo = _geopointManager.GetGeopoint(address);
-                user.GeoPoint = new GeoPoint(geo.Latitude, geo.Longitude);
-            }
-
-            return user;
         }
 
         internal void ValidateEmail(User user)
@@ -60,22 +46,6 @@ namespace ChoreCore.Managers
             if (!string.IsNullOrEmpty(user.PhoneNumber) && !Regex.Match(user.PhoneNumber, RegexValidation.PhoneNumberPattern).Success)
             {
                 throw new Exception("Invalid phone number.");
-            }
-        }
-
-        internal void ValidateState(User user)
-        {
-            if (!string.IsNullOrEmpty(user.State) && !Enum.IsDefined(typeof(States), user.State))
-            {
-                throw new Exception("Invalid state.");
-            }
-        }
-
-        internal void ValidateZipCode(User user)
-        {
-            if (!string.IsNullOrEmpty(user.Zip) && !Regex.Match(user.Zip, RegexValidation.ZipPattern).Success)
-            {
-                throw new Exception("Invalid zip code.");
             }
         }
     }

@@ -52,7 +52,6 @@ namespace ChoreCore.Managers
             string id = (await GetUser(user.Email)).Id;
 
             string error = _userValidation.ValidateUser(user);
-            user = _userValidation.SetGeopoint(user);
 
             if (string.IsNullOrEmpty(error))
             {
@@ -64,11 +63,10 @@ namespace ChoreCore.Managers
 
         public async Task<User> GetUser(string email)
         {
-            IQuery result = _collectionReference.WhereEqualsTo(nameof(User.Email), email);
-
-            IQuerySnapshot query = await result.GetDocumentsAsync();
-
-            return query.ToObjects<User>().First();
+            return (await _collectionReference.WhereEqualsTo(nameof(User.Email), email)
+                                              .GetDocumentsAsync())
+                                              .ToObjects<User>()
+                                              .First();
         }
 
         public async Task<string> UploadProfilePic(string userId, Stream stream)
@@ -89,22 +87,23 @@ namespace ChoreCore.Managers
             return message;
         }
 
-        public async Task<Stream> GetProfilePic(string userId)
+        public async Task<byte[]> GetProfilePic(string userId)
         {
-            Stream stream = null;
+            byte[] picture = new byte[1024 * 1024];
 
             IStorageReference reference = _storageReference.GetChild($"ProfilePics/{userId}.jpg");
 
             try
             {
-                stream = await reference.GetStreamAsync();
+                picture = await reference.GetBytesAsync(1024 * 1024);
+
             }
-            catch (FirebaseStorageException e)
+            catch (FirebaseStorageException)
             {
                 // possible do something here later??
             }
 
-            return stream;
+            return picture;
         }
     }
 }

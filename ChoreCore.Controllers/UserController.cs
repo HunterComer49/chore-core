@@ -35,7 +35,7 @@ namespace ChoreCore.Controllers
             if (stream != null)
             {
                 await _userManager.UploadProfilePic(user.Id, stream);
-                _constantUserInstance.SetProfilePic(stream);
+                _constantUserInstance.SetProfilePic(await _userManager.GetProfilePic(user.Id));
             }
 
             string result = await _userManager.UpdateUser(user);
@@ -54,7 +54,7 @@ namespace ChoreCore.Controllers
 
             _constantUserInstance.SetUser(user);
 
-            Stream profilePic = await _userManager.GetProfilePic(user.Id);
+            byte[] profilePic = await _userManager.GetProfilePic(user.Id);
 
             if (profilePic != null)
             {

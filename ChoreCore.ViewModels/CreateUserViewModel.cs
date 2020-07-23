@@ -86,62 +86,27 @@ namespace ChoreCore.ViewModels
         public bool PasswordErrorVis
         {
             get { return _passwordErrorVis; }
-            set
-            {
-                if (_passwordErrorVis != value)
-                {
-                    _passwordErrorVis = value;
-                    OnPropertyChanged();
-                }
-            }
+            set { SetAndRaise(ref _passwordErrorVis, value); }
         }
         public bool CreateUserErrorVis
         {
             get { return _createUserErrorVis; }
-            set
-            {
-                if (_createUserErrorVis != value)
-                {
-                    _createUserErrorVis = value;
-                    OnPropertyChanged();
-                }
-            }
+            set { SetAndRaise(ref _createUserErrorVis, value); }
         }
         public bool EmailErrorVis
         {
             get { return _emailErrorVis; }
-            set
-            {
-                if (_emailErrorVis != value)
-                {
-                    _emailErrorVis = value;
-                    OnPropertyChanged();
-                }
-            }
+            set { SetAndRaise(ref _emailErrorVis, value); }
         }
         public bool PasswordIncorrectErrorVis
         {
             get { return _passwordIncorrectErrorVis; }
-            set
-            {
-                if (_passwordIncorrectErrorVis != value)
-                {
-                    _passwordIncorrectErrorVis = value;
-                    OnPropertyChanged();
-                }
-            }
+            set { SetAndRaise(ref _passwordIncorrectErrorVis, value); }
         }
         public string EmailError
         {
             get { return _emailError; }
-            set
-            {
-                if (_emailError != value)
-                {
-                    _emailError = value;
-                    OnPropertyChanged();
-                }
-            }
+            set { SetAndRaise(ref _emailError, value); }
         }
         #endregion
 

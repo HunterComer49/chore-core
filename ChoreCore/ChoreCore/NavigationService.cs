@@ -41,5 +41,11 @@ namespace ChoreCore
             await Application.Current.MainPage.Navigation
                   .PushAsync(new ProfileSettingsPage());
         }
+
+        public async Task NavigateToAddProject()
+        {
+            await Application.Current.MainPage.Navigation
+                 .PushAsync(new AddProjectPage());
+        }
     }
 }

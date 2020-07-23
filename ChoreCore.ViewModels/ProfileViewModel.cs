@@ -12,6 +12,7 @@ namespace ChoreCore.ViewModels
         private INavigationService _navigationService;
         private User _user;
         private ImageSource _profilePicture;
+        private int _tabIndex;
 
         public ProfileViewModel(IConstantUserInstance constantUserInstance = null, INavigationService navigationService = null)
         {
@@ -27,30 +28,21 @@ namespace ChoreCore.ViewModels
         public User User
         {
             get { return _user; }
-            set
-            {
-                if (_user != value)
-                {
-                    _user = value;
-                    OnPropertyChanged();
-                }
-            }
+            set { SetAndRaise(ref _user, value); }
         }
         public ImageSource ProfilePicture
         {
             get { return _profilePicture; }
-            set
-            {
-                if (_profilePicture != value)
-                {
-                    _profilePicture = value;
-                    OnPropertyChanged();
-                }
-            }
+            set { SetAndRaise(ref _profilePicture, value); }
         }
         public string Name
         {
             get { return ($"{User.FirstName} {User.LastName}").ToString(); }
+        }
+        public int TabIndex
+        {
+            get { return _tabIndex; }
+            set { SetAndRaise(ref _tabIndex, value); }
         }
         #endregion
 
@@ -58,12 +50,14 @@ namespace ChoreCore.ViewModels
 
         private void Init()
         {
+            TabIndex = Constants.ProfilePastProjectsIndex;
+
             User = _constantUserInstance.GetUser();
 
             byte[] imageByte = _constantUserInstance.GetProfilePic();
 
             // if stream is null, use the empty profile picture
-            ProfilePicture = imageByte != null ? ByteToImage(imageByte): ImageSource.FromFile("Assets/Images/emptyProfile.png");
+            ProfilePicture = imageByte != null ? ByteToImage(imageByte) : ImageSource.FromFile("Assets/Images/emptyProfile.png");
         }
 
         internal async void OnSettings()

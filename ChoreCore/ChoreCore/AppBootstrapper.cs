@@ -16,10 +16,18 @@ namespace ChoreCore
         {
             Locator.CurrentMutable.Register(() => new NavigationService(), typeof(INavigationService));
 
+            //Address
+            Locator.CurrentMutable.Register(() => new AddressValidation(), typeof(IAddressValidation));
+
             //User 
             Locator.CurrentMutable.Register(() => new UserValidation(), typeof(IUserValidation));
             Locator.CurrentMutable.Register(() => new UserManager(), typeof(IUserManager));
             Locator.CurrentMutable.Register(() => new UserController(), typeof(IUserController));
+
+            //Project
+            Locator.CurrentMutable.Register(() => new ProjectValidation(), typeof(IProjectValidation));
+            Locator.CurrentMutable.Register(() => new ProjectManager(), typeof(IProjectManager));
+            Locator.CurrentMutable.Register(() => new ProjectController(), typeof(IProjectController));
 
             //Geopoint 
             Locator.CurrentMutable.Register(() => new GeopointManager(), typeof(IGeopointManager));
@@ -28,6 +36,7 @@ namespace ChoreCore
             Locator.CurrentMutable.RegisterLazySingleton(() => new ConstantUserInstance(), typeof(IConstantUserInstance));
 
             //View Models
+            Locator.CurrentMutable.Register(() => new MainNavigationViewModel(), typeof(IMainNavigationViewModel));
             Locator.CurrentMutable.Register(() => new CreateUserViewModel(), typeof(ICreateUserViewModel));
             Locator.CurrentMutable.Register(() => new ProfileViewModel(), typeof(IProfileViewModel));
             Locator.CurrentMutable.Register(() => new ProfileSettingsViewModel(), typeof(IProfileSettingsViewModel));

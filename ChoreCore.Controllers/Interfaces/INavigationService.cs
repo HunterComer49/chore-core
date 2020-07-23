@@ -10,5 +10,6 @@ namespace ChoreCore.Controllers
         Task NavigateToHomePage(int index = 0);
         Task NavigateToNewUserInfo();
         Task NavigateToProfileSettings();
+        Task NavigateToAddProject();
     }
 }

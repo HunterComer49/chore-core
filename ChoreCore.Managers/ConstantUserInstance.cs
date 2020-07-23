@@ -1,12 +1,11 @@
 ﻿using ChoreCore.Models;
-using System.IO;
 
 namespace ChoreCore.Managers
 {
     public class ConstantUserInstance : IConstantUserInstance
     {
         private User _user;
-        private byte[] _profilePicStream;
+        private byte[] _profilePic = new byte[16 * 1024];
 
         public ConstantUserInstance() { }
 
@@ -14,24 +13,9 @@ namespace ChoreCore.Managers
 
         public User GetUser() => _user;
 
-        public void SetProfilePic(Stream stream)
-        {
-            _profilePicStream = new byte[16 * 1024];
+        public void SetProfilePic(byte[] image) => _profilePic = image;
 
-            using (MemoryStream ms = new MemoryStream())
-            {
-                int read;
-
-                while ((read = stream.Read(_profilePicStream, 0, _profilePicStream.Length)) > 0)
-                {
-                    ms.Write(_profilePicStream, 0, read);
-                }
-
-                _profilePicStream = ms.ToArray();
-            }
-        }
-
-        public byte[] GetProfilePic() => _profilePicStream;
+        public byte[] GetProfilePic() => _profilePic;
 
     }
 }

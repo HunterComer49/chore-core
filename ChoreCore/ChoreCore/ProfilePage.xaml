@@ -61,7 +61,8 @@
 
                         <StackLayout Orientation="Horizontal">
                             <customviews:RatingStars Precision="Half"
-                                                     WidthRequest="130"
+                                                     StarWidth="30"
+                                                     StarHeight="25"
                                                      ImageEmptyStar="rating_empty.png"
                                                      ImageFullStar="rating_full.png"
                                                      ImageHalfStar="rating_half.png"
@@ -91,7 +92,8 @@
 
                     <tabs:ViewSwitcher x:Name="Switcher"
                                        Animate="True"
-                                       Grid.Row="3">
+                                       Grid.Row="3"
+                                       SelectedIndex="{Binding TabIndex, Mode=TwoWay}">
 
                     </tabs:ViewSwitcher>
                 </Grid>
